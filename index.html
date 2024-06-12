@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultura Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="imgs/Logo.png">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="login-box">
+            <div id="logged-in-user" style="display: none;"></div>
+            <div class="btn btn-three" id="login-btn">
+                <span>Login</span>
+            </div>
+            <!-- Restante do código HTML -->
+        </div>
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required><br>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required><br>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+        </div>
+        <h1 class="main-title">Agricultura Inteligente</h1>
+        <div class="site-description">
+            <p>Transformando a forma como cultivamos o futuro.</p>
+            <p>Conectando tecnologia e natureza para um mundo mais sustentável.</p>
+        </div>
+    </header>
+
+        <div class="content-container">
+            <section class="quem-somos">
+                <h2>Quem Somos</h2>
+                <div class="quem-somos-content">
+                    <div>
+                        <h3>Liderança Visionária</h3>
+                        <p>Nossa equipe de especialistas combina profunda experiência no agronegócio com uma visão inovadora.</p>
+                    </div>
+                    <div>
+                        <h3>Compromisso com Resultados</h3>
+                        <p>Nosso objetivo é impulsionar o sucesso dos nossos clientes através de soluções práticas e eficientes.</p>
+                    </div>
+                    <div>
+                        <h3>Valores Sustentáveis</h3>
+                        <p>Prezamos pela sustentabilidade em todas as nossas iniciativas, promovendo práticas agroecológicas.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico">
+                <h1>1.</h1>
+                <h3> Agricultura de Precisão</h3>
+                <p>Otimizamos o uso de insumos e recursos através de tecnologias avançadas de sensoriamento e análise de
+                    dados.</p>
+            </div>
+            <div class="servico">
+                <h1>2.</h1>
+                <h3> Gestão Integrada</h3>
+                <p>Oferecemos soluções de gerenciamento eficiente de lavouras, rebanhos e processos pós-colheita.</p>
+            </div>
+            <div class="servico">
+                <h1>3.</h1>
+                <h3> Consultoria Especializada</h3>
+                <p>Nossos especialistas fornecem orientação estratégica para maximizar a produtividade e
+                    sustentabilidade.</p>
+            </div>
+            <div class="servico">
+                <h1>4.</h1>
+                <h3> Treinamento e Capacitação</h3>
+                <p>Promovemos o desenvolvimento de competências técnicas e gerenciais para a equipe do cliente.</p>
+            </div>
+        </div>
+    </section>
+
+    <nav>
+        <ul>
+            <li><button id="toggle-gestao" class="toggle-section" data-target="#gestao">Gestão da Fazenda</button></li>
+            <li><button id="toggle-pragas" class="toggle-section" data-target="#pragas">Identificação de Pragas e
+                    Doenças</button></li>
+            <li><button id="toggle-fertilizantes" class="toggle-section" data-target="#fertilizantes">Aplicação de
+                    Fertilizantes e Defensivos</button></li>
+            <li><button id="toggle-weather" class="toggle-section" data-target="#clima">Previsão do Tempo</button></li>
+            <li><button id="toggle-automacao" class="toggle-section" data-target="#automacao">Automação de
+                    Máquinas</button></li>
+            <li><button id="toggle-monitoramento" class="toggle-section"
+                    data-target="#monitoramento-cultivos">Monitoramento de Cultivos</button></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="gestao" class="hide">
+            <h2>Gestão da Fazenda</h2>
+            <!-- Conteúdo sobre gestão da fazenda -->
+  
+        </section>
+        <section id="monitoramento-cultivos" class="hide">
+            <div class="Cultivo">
+                <div class="h2-container">
+                    <img src="imgs/Trator.png" alt="Ícone de Cultivo" class="h2-icon">
+                    <h2>Monitoramento de Cultivo</h2>
+                </div>
+            </div>
+            <p>Bem-vindo à seção "Monitoramento de Cultivo" do nosso site! Esta funcionalidade é uma ferramenta essencial para agricultores modernos que desejam acompanhar e gerenciar suas plantações de maneira eficiente.</p>
+        
+            <h3>Visão Geral</h3>
+            <p>Ao acessar a seção "Monitoramento de Cultivo", você encontrará diversas informações e ferramentas projetadas para ajudar no gerenciamento das suas culturas agrícolas. A seção é composta por diversas partes, incluindo um formulário de cadastro de cultivos, uma lista de dados salvos e uma área para visualização gráfica.</p>
+        
+            <h3>Como Utilizar</h3>
+            <ul>
+                <li>
+                    <strong>Preenchimento do Formulário:</strong>
+                    <ul>
+                        <li>No formulário, você será solicitado a fornecer algumas informações essenciais sobre suas culturas.</li>
+                        <li><strong>Tipo de Cultura:</strong> Digite o nome do tipo de cultivo que você está monitorando, como "milho", "soja", "trigo", etc.</li>
+                        <li><strong>Data de Plantio:</strong> Selecione a data em que você plantou a cultura. Isso ajuda a rastrear o crescimento e desenvolvimento da planta ao longo do tempo.</li>
+                        <li><strong>Área Plantada (em hectares):</strong> Insira o tamanho da área onde a cultura foi plantada. Esse dado é importante para calcular a produtividade e a gestão dos recursos.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Adicionando um Cultivo:</strong>
+                    <ul>
+                        <li>Após preencher todos os campos obrigatórios, clique no botão "Adicionar Cultivo".</li>
+                        <li>O sistema irá capturar os dados inseridos e exibir uma nova entrada na lista de "Dados Salvos". Cada entrada mostrará o tipo de cultura, a data de plantio e a área plantada.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Visualização dos Dados Salvos:</strong>
+                    <ul>
+                        <li>Na seção "Dados Salvos", você verá uma lista com todas as culturas que foram cadastradas. Isso facilita o acompanhamento de diferentes cultivos ao longo do tempo.</li>
+                        <li>Cada item na lista será exibido no formato: <em>Tipo: [tipo de cultura], Data de Plantio: [data], Área: [área] hectares</em>.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Reset do Formulário:</strong>
+                    <ul>
+                        <li>Depois de adicionar um cultivo, o formulário será automaticamente resetado para que você possa inserir novas informações sem precisar apagar os dados anteriores manualmente.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Visualização Gráfica:</strong>
+                    <ul>
+                        <li>Há uma seção reservada para gráficos que permitirão uma análise visual dos seus dados de cultivo. (Nota: a implementação do gráfico não está descrita aqui, mas normalmente incluiria informações como crescimento ao longo do tempo, comparação de produtividade entre diferentes cultivos, etc.)</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Benefícios</h3>
+            <ul>
+                <li><strong>Organização:</strong> Mantenha todas as informações sobre suas plantações organizadas em um só lugar.</li>
+                <li><strong>Gestão Eficiente:</strong> Com dados precisos e atualizados, você pode tomar decisões mais informadas sobre o manejo das suas culturas.</li>
+                <li><strong>Análise:</strong> Através da visualização gráfica, identifique padrões e tendências que podem ajudar a melhorar a produtividade.</li>
+            </ul>
+            <p>Utilizar a ferramenta de monitoramento de cultivo é simples e intuitivo, proporcionando uma maneira eficaz de gerenciar suas plantações e maximizar a eficiência agrícola. Aproveite ao máximo essa funcionalidade para otimizar suas práticas de cultivo e alcançar melhores resultados!</p>
+        
+            <form id="cultivo-form">
+                <label for="tipo">Tipo de Cultura:</label>
+                <input type="text" id="tipo" name="tipo" required><br>
+                <label for="data-plantio">Data de Plantio:</label>
+                <input type="date" id="data-plantio" name="data-plantio" required><br>
+                <label for="area">Área Plantada (em hectares):</label>
+                <input type="number" id="area" name="area" min="0" step="0.01" required><br>
+                <button type="submit">Adicionar Cultivo</button>
+            </form>
+            <div id="dados-salvos">
+                <h3>Dados Salvos:</h3>
+                <ul id="lista-cultivos"></ul>
+            </div>
+            <div id="grafico"></div>
+        </section>
+            
+      
+<section id="clima" class="hide">
+    <div class="h2-container">
+        <img src="imgs/Tempo.png" alt="Ícone do Clima" class="h2-icon">
+        <h2>Previsão do Tempo e Clima</h2>
+    </div>
+    <p>A seção de Previsão do Tempo e Clima fornece informações detalhadas...</p>
+    <div class="container">
+        <div class="form">
+            <h3>Confira o clima de uma cidade: </h3>
+            <div class="form-input-container">
+                <input type="text" placeholder="Insira o nome da cidade" id="city-input">
+                <button id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <div id="weather-data" class="hide">
+            <h2>
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="city"></span>
+                <img src="" alt="Pais do Clima" id="country">
+            </h2>
+            <p id="temperature"><span></span>&deg;C</p>
+            <div id="description-container">
+                <p id="description"></p>
+                <img src="" alt="Condições Climáticas" id="weather-icon">
+            </div>
+            <div id="details-container">
+                <p id="humidity">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span></span>
+                </p>
+                <p id="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="automacao" class="hide">
+            <h2>Automação de Máquinas</h2>
+            <!-- Conteúdo sobre automação de máquinas -->
+        </section>
+
+        <section id="pragas" class="hide">
+            <h2>Identificação de Pragas e Doenças</h2>
+            <!-- Conteúdo sobre gestão da fazenda -->
+        </section>
+
+        <section id="fertilizantes" class="hide">
+            <h2>Aplicação de Fertilizantes e Defensivos</h2>
+            <!-- Conteúdo sobre gestão da fazenda -->
+        </section>
+
+       <section id="tecnologia">
+    <h1>Tecnologias Avançadas</h1>
+    <div class="Tecnologia-container">
+        <div class="Tecnologia">
+            <h3>Agricultura de Precisão</h3>
+            <p>Sensores, drones e imagens de satélite para coleta de dados precisos.</p>
+        </div>
+        <div class="Tecnologia">
+            <h3>Automação de Processos</h3>
+            <p>Mecanização inteligente e robótica para otimizar a produtividade.</p>
+        </div>
+        <div class="Tecnologia">
+            <h3>Análise de Dados</h3>
+            <p>Plataformas de inteligência artificial para tomada de decisões informadas.</p>
+        </div>
+        <div class="Tecnologia">
+            <h3>Agricultura Protegida</h3>
+            <p>Soluções de cultivo em ambiente controlado para maior eficiência.</p>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Agricultura Inteligente</p>
+    </footer>
+    <script>
+        // Adicione um ouvinte de evento de clique ao botão de login
+        document.getElementById('login-btn').addEventListener('click', function () {
+            // Exibir o modal de login
+            document.getElementById('login-modal').style.display = 'block';
+        });
+
+        // Adicione um ouvinte de evento de clique ao botão de fechar no modal de login
+        document.getElementsByClassName('close')[0].addEventListener('click', function () {
+            // Fechar o modal de login
+            document.getElementById('login-modal').style.display = 'none';
+        });
+
+        // Adicione um ouvinte de evento de clique fora do modal para fechá-lo
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('login-modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

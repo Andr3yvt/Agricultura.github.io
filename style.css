@@ -1,0 +1,592 @@
+/* Estilos básicos */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FEF5E7;
+}
+
+.main-header {
+    background-image: url(imgs/Folhas2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #1e8449;
+    color: #1e8449;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1s ease;
+    position: relative;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main-title {
+    font-size: 4rem;
+}
+
+
+.site-description {
+    margin-top: 20px;
+    text-align: center;
+    color: #1e8449;
+}
+
+.site-description p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.login-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.login-box:hover {
+    opacity: 1;
+}
+
+.btn {
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #1e8449;
+    transition: background-color 0.3s ease;
+}
+
+.btn-three {
+    background-color: #1e8449;
+    box-shadow: 5px 5px 5px  #19703d;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-three:hover {
+    background-color: #145a32;
+    transform: scale(1.05);
+}
+
+nav {
+    background-color: rgba(30, 132, 73, 0.92);
+    padding: 20px 0;
+}
+
+
+/* styles.css */
+
+.quem-somos {
+    background-color: #e7fbfe6e;
+    color: #1e8449;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.quem-somos h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #1e8449;
+}
+
+.quem-somos-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.quem-somos-content div {
+    max-width: 30%;
+    min-width: 200px;
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.quem-somos-content div.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.quem-somos-content h3 {
+    color: #1e8449;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.quem-somos-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px; /* Adicionado espaçamento entre os botões */
+}
+
+/* Animação nos botões */
+nav ul li button {
+    background: linear-gradient(180deg, rgb(30, 132, 73) 0%, #228d4f 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 5px 5px 5px #196d3c;
+}
+
+nav ul li button:hover {
+    background: linear-gradient(180deg, rgb(26, 112, 62) 0%, #1f8047 100%);
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Animação nas abas */
+section {
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
+}
+
+.hide {
+    display: none;
+    opacity: 0; /* Torna as seções ocultas transparentes */
+    transform: translateY(-20px); /* Move para cima ao se tornar invisível */
+}
+
+main section:not(.hide) {
+    display: block;
+    opacity: 1; /* Torna as seções visíveis opacas */
+    transform: translateY(0); /* Volta à posição original */
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #1e8449;
+    margin-bottom: 10px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e8449;
+    color: #fff;
+}
+
+/* Estilos adicionais */
+#dados-salvos {
+    margin-top: 20px;
+}
+
+#cultivo-form label, #cultivo-form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#cultivo-form button {
+    background: linear-gradient(180deg, rgb(30, 132, 73) 0%, #2cc26a 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#cultivo-form button:hover {
+    background: linear-gradient(180deg, rgb(20, 88, 48) 0%, #239b55 100%);
+    transform: scale(1.05);
+}
+
+/* Estilos de formulário e exibição de clima */
+.container {
+    background: linear-gradient(180deg, rgba(89, 76, 238, 1) 0%, #8dd0f5 100%);
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#clima-icon {
+    transition: transform 0.3s ease filter 0.3s ease;
+    height: 60px;
+    box-shadow: 5px 5px 5px grey;
+
+}
+
+#clima-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+.form h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form-input-container button {
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(180deg, rgb(30, 132, 73) 0%, #2cc26a 100%);
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-input-container button:hover {
+    background: linear-gradient(180deg, rgb(20, 88, 48) 0%, #239b55 100%);
+    transform: scale(1.05);
+}
+
+#weather-data {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#weather-data h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#weather-data img {
+    margin-left: 10px;
+}
+
+#temperature {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+#details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#details-container p {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+#details-container i {
+    margin-right: 5px;
+}
+
+/* Media Queries para Responsividade */
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .site-description p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+    }
+    
+    nav ul li button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    #weather-data img {
+        max-width: 50px;
+    }
+
+    /* Adaptação para telas menores */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .site-description p {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+    }
+    
+    nav ul li button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    #weather-data img {
+        max-width: 40px;
+    }
+
+    /* Adaptação para telas menores */
+    nav ul li button {
+        flex-grow: 1;
+        margin: 5px;
+    }
+}
+
+/* Animação de aparecer de baixo para cima */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Aplica a animação a todos os elementos */
+.content-container {
+    animation: slideInFromBottom 1s ease;
+}
+
+main section {
+    animation: slideInFromBottom 1s ease;
+}
+
+/* Adiciona estilos para a seção de serviços */
+/* styles.css */
+
+#servicos {
+    background-color: #FEF5E7;
+    color: #38512F;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.servico h1 {
+    display: inline-block;
+    margin: 10px;
+    border: solid;
+    border-color: #F6E9D5;
+    border-radius: 5px;
+    background-color: #F6E9D5;
+    padding: 10px 15px;
+}
+
+.servico h3 {
+    display: inline-block;
+    margin: 0;
+}
+
+.servicos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servico {
+    flex: 1 0 45%; /* Define a largura de cada serviço */
+    text-align: left;
+    padding: 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.servico.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.servico:nth-child(3),
+.servico:nth-child(4) {
+    margin-top: 20px; /* Adiciona margem entre os serviços 3 e 4 */
+}
+
+/* Estilos CSS para o modal de login */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Permite o posicionamento fixo */
+    z-index: 1000; /* Garante que o modal esteja acima de outros elementos */
+    left: 50%; /* Posiciona o modal no centro horizontalmente */
+    top: 50%; /* Posiciona o modal no centro verticalmente */
+    transform: translate(-50%, -50%); /* Centraliza o modal */
+    width: 80%;
+    max-width: 400px; /* Largura máxima do modal */
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 20px; /* Bordas circulares */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.close {
+    color: #aaa;
+    position: absolute; /* Posiciona o botão de fechar */
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form label,
+#login-form input {
+    margin-bottom: 10px;
+}
+
+#login-form button {
+    background-color: #1e8449;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: #145a32;
+}
+
+#logged-in-user {
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Torna o texto em negrito */
+    color: #021a12; /* Cor do texto */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+.h2-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre a imagem e o texto */
+    margin-bottom: 20px; /* Margem inferior para separar do conteúdo seguinte */
+}
+
+.h2-icon {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    transition: transform 0.3s ease filter 0.3s ease;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.h2-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+.tech-section {
+    margin-top: 20px;
+}
+
+.tech-section h3 {
+    margin-top: 20px;
+    color: #2c3e50; /* Cor para diferenciar os títulos das subseções */
+}
+
+.tech-section p {
+    margin: 10px 0;
+    line-height: 1.6; /* Espaçamento entre as linhas para melhor legibilidade */
+}
+/* TECNOLOGIA */
+#tecnologia {
+    color: #1e5f2e;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.Tecnologia-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.Tecnologia {
+    flex: 1 0 45%; /* Define the width of each technology box */
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #1e501c;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.Tecnologia.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Tecnologia:nth-child(3),
+.Tecnologia:nth-child(4) {
+    margin-top: 20px; /* Add margin between technology items 3 and 4 */
+}
