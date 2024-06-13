@@ -590,3 +590,132 @@ main section {
 .Tecnologia:nth-child(4) {
     margin-top: 20px; /* Add margin between technology items 3 and 4 */
 }
+
+.sustentabilidade {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.sustentabilidade h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+.accordion {
+    background-color: white;
+    color: #1e8449;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1.2em;
+}
+
+.accordion:after {
+    content: '\25B6'; 
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.4s;
+}
+
+.accordion.active:after {
+    transform: rotate(90deg);
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    margin-bottom: 10px;
+}
+
+.panel ul {
+    list-style-type: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+
+.success-cases {
+    background: url('imgs/fazendeiro.jpg') no-repeat center center fixed; /* Add the background image path */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.success-cases h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.timeline-item .content {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.timeline-item .number {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item:nth-child(odd) .number {
+    bottom: -65px;
+}
+
+.timeline-item:nth-child(even) .number {
+    top: -75px;
+}
+
+.timeline-item:nth-child(2) .number {
+    top: 10;
+    left: auto;
+    right: 85px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #137513; /* Green line */
+    z-index: -1;
+}
