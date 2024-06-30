@@ -23,7 +23,6 @@ body {
     position: relative;
 }
 
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -36,7 +35,6 @@ body {
 .main-title {
     font-size: 4rem;
 }
-
 
 .site-description {
     margin-top: 20px;
@@ -90,11 +88,8 @@ nav {
     padding: 20px 0;
 }
 
-
-/* styles.css */
-
 .quem-somos {
-    background-color: #e7fbfe6e;
+    background-color: #FEF5E7;
     color: #1e8449;
     padding: 40px 20px;
     text-align: center;
@@ -200,7 +195,6 @@ footer {
     color: #fff;
 }
 
-/* Estilos adicionais */
 #dados-salvos {
     margin-top: 20px;
 }
@@ -225,7 +219,6 @@ footer {
     transform: scale(1.05);
 }
 
-/* Estilos de formulário e exibição de clima */
 .container {
     background: linear-gradient(180deg, rgba(89, 76, 238, 1) 0%, #8dd0f5 100%);
     max-width: 600px;
@@ -245,7 +238,6 @@ footer {
     transition: transform 0.3s ease filter 0.3s ease;
     height: 60px;
     box-shadow: 5px 5px 5px grey;
-
 }
 
 #clima-icon:hover {
@@ -351,7 +343,6 @@ footer {
         max-width: 50px;
     }
 
-    /* Adaptação para telas menores */
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -389,14 +380,12 @@ footer {
         max-width: 40px;
     }
 
-    /* Adaptação para telas menores */
     nav ul li button {
         flex-grow: 1;
         margin: 5px;
     }
 }
 
-/* Animação de aparecer de baixo para cima */
 @keyframes slideInFromBottom {
     0% {
         transform: translateY(100%);
@@ -408,7 +397,6 @@ footer {
     }
 }
 
-/* Aplica a animação a todos os elementos */
 .content-container {
     animation: slideInFromBottom 1s ease;
 }
@@ -416,9 +404,6 @@ footer {
 main section {
     animation: slideInFromBottom 1s ease;
 }
-
-/* Adiciona estilos para a seção de serviços */
-/* styles.css */
 
 #servicos {
     background-color: #FEF5E7;
@@ -449,7 +434,7 @@ main section {
 }
 
 .servico {
-    flex: 1 0 45%; /* Define a largura de cada serviço */
+    flex: 1 0 45%;
     text-align: left;
     padding: 20px;
     border-radius: 5px;
@@ -465,28 +450,28 @@ main section {
 
 .servico:nth-child(3),
 .servico:nth-child(4) {
-    margin-top: 20px; /* Adiciona margem entre os serviços 3 e 4 */
+    margin-top: 20px;
 }
 
-/* Estilos CSS para o modal de login */
+/* Estilos para o modal de login */
 .modal {
-    display: none; /* Oculta o modal por padrão */
-    position: fixed; /* Permite o posicionamento fixo */
-    z-index: 1000; /* Garante que o modal esteja acima de outros elementos */
-    left: 50%; /* Posiciona o modal no centro horizontalmente */
-    top: 50%; /* Posiciona o modal no centro verticalmente */
-    transform: translate(-50%, -50%); /* Centraliza o modal */
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 400px; /* Largura máxima do modal */
+    max-width: 400px;
     background-color: #fefefe;
     padding: 20px;
-    border-radius: 20px; /* Bordas circulares */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .close {
     color: #aaa;
-    position: absolute; /* Posiciona o botão de fechar */
+    position: absolute;
     top: 10px;
     right: 10px;
     font-size: 28px;
@@ -518,21 +503,21 @@ main section {
 }
 
 #logged-in-user {
-    font-size: 1.5rem; /* Aumenta o tamanho da fonte */
-    font-weight: bold; /* Torna o texto em negrito */
-    color: #021a12; /* Cor do texto */
-    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #021a12;
+    text-transform: uppercase;
 }
 
 .h2-container {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre a imagem e o texto */
-    margin-bottom: 20px; /* Margem inferior para separar do conteúdo seguinte */
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .h2-icon {
-    width: 50px; /* Ajuste o tamanho conforme necessário */
+    width: 50px;
     height: auto;
     transition: transform 0.3s ease filter 0.3s ease;
     box-shadow: 5px 5px 5px grey;
@@ -549,13 +534,14 @@ main section {
 
 .tech-section h3 {
     margin-top: 20px;
-    color: #2c3e50; /* Cor para diferenciar os títulos das subseções */
+    color: #2c3e50;
 }
 
 .tech-section p {
     margin: 10px 0;
-    line-height: 1.6; /* Espaçamento entre as linhas para melhor legibilidade */
+    line-height: 1.6;
 }
+
 /* TECNOLOGIA */
 #tecnologia {
     color: #1e5f2e;
@@ -571,7 +557,7 @@ main section {
 }
 
 .Tecnologia {
-    flex: 1 0 45%; /* Define the width of each technology box */
+    flex: 1 0 45%;
     text-align: left;
     padding: 20px;
     border: 1px solid #1e501c;
@@ -588,22 +574,32 @@ main section {
 
 .Tecnologia:nth-child(3),
 .Tecnologia:nth-child(4) {
-    margin-top: 20px; /* Add margin between technology items 3 and 4 */
+    margin-top: 20px;
 }
 
-.sustentabilidade {
+#sustentabilidade {
     font-family: Arial, sans-serif;
     padding: 20px;
+}
+
+#sustentabilidade .item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#sustentabilidade .item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .sustentabilidade h1 {
     font-size: 20px;
     margin-bottom: 20px;
-
 }
 
 .accordion {
-    background-color: white;
+    background-color: #FEF5E7;
     color: #1e8449;
     cursor: pointer;
     padding: 10px;
@@ -630,7 +626,7 @@ main section {
 
 .panel {
     padding: 0 18px;
-    background-color: white;
+    background-color: #FEF5E7;
     display: none;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
@@ -643,79 +639,3 @@ main section {
     padding-left: 20px;
 }
 
-
-.success-cases {
-    background: url('imgs/fazendeiro.jpg') no-repeat center center fixed; /* Add the background image path */
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-}
-
-.success-cases h1 {
-    font-size: 3em;
-    margin-bottom: 50px;
-}
-
-.timeline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: 20px;
-}
-
-.timeline-item {
-    position: relative;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.timeline-item .content {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.timeline-item .number {
-    background-color: #fff;
-    color: #000;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.timeline-item:nth-child(odd) .number {
-    bottom: -65px;
-}
-
-.timeline-item:nth-child(even) .number {
-    top: -75px;
-}
-
-.timeline-item:nth-child(2) .number {
-    top: 10;
-    left: auto;
-    right: 85px;
-}
-
-.timeline:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #137513; /* Green line */
-    z-index: -1;
-}

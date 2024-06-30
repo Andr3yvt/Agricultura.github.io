@@ -3,12 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('main > section'); // Seleciona todas as seções dentro do main
     const servicosSection = document.getElementById('servicos'); // Obtém a seção "Nossos Serviços"
     const tecnologiaSection = document.getElementById('tecnologia'); // Obtém a seção "Tecnologia Avançada"
+    const sustentabilidadeSection = document.getElementById('sustentabilidade'); // Obtém a seção "Sustentabilidade"
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const targetSectionId = button.getAttribute('data-target').substring(1); // Obtém o ID da seção alvo sem o '#'
             sections.forEach(section => {
-                if (section.id !== targetSectionId && section.id !== 'servicos' && section.id !== 'tecnologia') {
+                if (section.id !== targetSectionId && section.id !== 'servicos' && section.id !== 'tecnologia'
+                 && section.id !== 'sustentabilidade') {
                     section.classList.add('hide');
                 }
             });
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 targetSection.classList.remove('hide');
                 servicosSection.classList.remove('hide');
                 tecnologiaSection.classList.remove('hide');
+                sustentabilidadeSection.classList.remove('hide');
             }
         });
     });
@@ -112,8 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const quemSomosElements = document.querySelectorAll('.quem-somos-content div');
     const servicosElements = document.querySelectorAll('.servico');
     const tecnologiaElements = document.querySelectorAll('.Tecnologia');
+    const sustentabilidadeElements = document.querySelectorAll('#sustentabilidade .item');
 
-    const elements = [...quemSomosElements, ...servicosElements, ...tecnologiaElements];
+    const elements = [...quemSomosElements, ...servicosElements, ...tecnologiaElements, ...sustentabilidadeElements];
 
     const observerOptions = {
         root: null,
