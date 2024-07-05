@@ -158,3 +158,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+window.addEventListener('load', function() {
+    // Desativa o scroll
+    document.body.classList.add('no-scroll');
+    
+    // Aguarda 3 segundos antes de iniciar a transição
+    setTimeout(function() {
+        // Inicia a transição do preloader para o conteúdo principal
+        document.getElementById('preloader').style.opacity = '0';
+        document.getElementById('main-content').classList.remove('hide');
+        document.getElementById('main-content').classList.add('show');
+        
+        // Aguarda a duração da transição antes de remover o preloader
+        setTimeout(function() {
+            document.getElementById('preloader').style.display = 'none';
+            // Ativa o scroll novamente
+            document.body.classList.remove('no-scroll');
+        }, 1000); // 1 segundo para coincidir com a duração da transição no CSS
+    }, 3000);
+});

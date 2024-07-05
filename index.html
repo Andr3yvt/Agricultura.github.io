@@ -18,6 +18,15 @@
 </head>
 
 <body>
+    <section id="preloader">
+        <div class="spinner"></div>
+        <div class="loading-text">
+            <span>I</span><span>n</span><span>i</span><span>c</span><span>i</span><span>a</span><span>n</span><span>d</span><span>o</span>
+            <span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span>
+        </div>
+    </section>
+
+
     <header class="main-header">
         <div class="login-box">
             <div id="logged-in-user" style="display: none;"></div>
@@ -31,20 +40,31 @@
                 <span class="close">&times;</span>
                 <h2>Login</h2>
                 <form id="login-form">
-                    <label for="username">Usuário:</label>
-                    <input type="text" id="username" name="username" required><br>
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" required><br>
+                    <div class="form-control">
+                        <input type="text" id="username" name="username" required="">
+                        <label>
+                            <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                      <input type="text"  id="password" name="password" required="">
+                        <label>
+                            <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+                        </label>
+                    </div>
                     <button type="submit">Entrar</button>
                 </form>
             </div>
         </div>
         </div>
-        <h1 class="main-title">Agricultura Inteligente</h1>
-        <div class="site-description">
-            <p>Transformando a forma como cultivamos o futuro.</p>
-            <p>Conectando tecnologia e natureza para um mundo mais sustentável.</p>
+        <div id="main-content" class="hide">
+            <h1 class="main-title">Agricultura Inteligente</h1>
+            <div class="site-description">
+                <p>Transformando a forma como cultivamos o futuro.</p>
+                <p>Conectando tecnologia e natureza para um mundo mais sustentável.</p>
+            </div>
         </div>
+        
     </header>
 
         <div class="content-container">
@@ -175,14 +195,24 @@
             <p>Utilizar a ferramenta de monitoramento de cultivo é simples e intuitivo, proporcionando uma maneira eficaz de gerenciar suas plantações e maximizar a eficiência agrícola. Aproveite ao máximo essa funcionalidade para otimizar suas práticas de cultivo e alcançar melhores resultados!</p>
         
             <form id="cultivo-form">
-                <label for="tipo">Tipo de Cultura:</label>
-                <input type="text" id="tipo" name="tipo" required><br>
-                <label for="data-plantio">Data de Plantio:</label>
-                <input type="date" id="data-plantio" name="data-plantio" required><br>
-                <label for="area">Área Plantada (em hectares):</label>
-                <input type="number" id="area" name="area" min="0" step="0.01" required><br>
+                <div class="input-container">
+                  <input id="tipo" name="tipo" type="text" class="input-field" placeholder=" " required>
+                  <label for="tipo" class="input-label">Tipo de Cultura</label>
+                  <span class="input-highlight"></span>
+                </div>
+                <div class="input-container">
+                  <input id="data-plantio" name="data-plantio" type="date" class="input-field" placeholder=" " required>
+                  <label for="data-plantio" class="input-label">Data de Plantio</label>
+                  <span class="input-highlight"></span>
+                </div>
+                <div class="input-container">
+                  <input id="area" name="area" type="number" min="0" step="0.01" class="input-field" placeholder=" " required>
+                  <label for="area" class="input-label">Área Plantada (em hectares)</label>
+                  <span class="input-highlight"></span>
+                </div>
                 <button type="submit">Adicionar Cultivo</button>
-            </form>
+              </form>
+              
             <div id="dados-salvos">
                 <h3>Dados Salvos:</h3>
                 <ul id="lista-cultivos"></ul>
@@ -321,6 +351,7 @@
         });
     </script>
     <script src="main.js"></script>
+</div>
 </body>
 
 </html>
