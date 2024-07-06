@@ -201,6 +201,60 @@ footer {
     margin-top: 20px;
 }
 
+#monitoramento-cultivos {
+    padding: 20px;
+}
+
+#monitoramento-cultivos h2, #monitoramento-cultivos h3 {
+    color: #1e8449;
+}
+
+#monitoramento-cultivos p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+#monitoramento-cultivos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#monitoramento-cultivos li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#monitoramento-cultivos li:hover {
+    background-color: #f9f9f9;
+}
+
+#monitoramento-cultivos ul ul {
+    margin-left: 20px;
+}
+
+#monitoramento-cultivos strong {
+    color: #1e8449;
+}
+
+#monitoramento-cultivos p:first-letter {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+#monitoramento-cultivos p:hover {
+    background-color: #f9f9f9;
+    border-left: 4px solid #1e8449;
+    padding-left: 16px;
+    transition: background-color 0.3s, border-left 0.3s, padding-left 0.3s;
+}
+
+
 #cultivo-form label, #cultivo-form input {
     display: block;
     margin-bottom: 10px;
@@ -253,6 +307,59 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+}
+
+#clima {
+    padding: 20px;
+}
+
+#clima h2, #clima h3 {
+    color: #1e8449;
+}
+
+#clima p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+#clima ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#clima li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#clima li:hover {
+    background-color: #f9f9f9;
+}
+
+#clima ul ul {
+    margin-left: 20px;
+}
+
+#clima strong {
+    color: #1e8449;
+}
+
+#clima p:first-letter {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+#clima p:hover {
+    background-color: #f9f9f9;
+    border-left: 4px solid #1e8449;
+    padding-left: 16px;
+    transition: background-color 0.3s, border-left 0.3s, padding-left 0.3s;
 }
 
 #clima-icon {
@@ -475,7 +582,6 @@ main section {
     margin-top: 20px;
 }
 
-/* Estilos para o modal de login */
 .modal {
     display: none;
     position: fixed;
@@ -491,17 +597,79 @@ main section {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.close {
-    color: #aaa;
+.button {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 28px;
-    font-weight: bold;
+    width: 2em;  /* Adjusted width */
+    height: 2em;  /* Adjusted height */
+    border: none;
+    background: rgba(180, 83, 107, 0.11);
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+.X {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1.5px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1.5px;
+    background-color: #fff;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.button .close {
+    position: absolute;
+    display: flex;
+    padding: 0.4rem 0.75rem;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    top: -70%;
+    left: 50%;
+    width: 1.5em;  /* Adjusted width */
+    height: 0.85em;
+    font-size: 12px;
+    background-color: rgb(19, 22, 24);
+    color: rgb(187, 229, 236);
+    border: none;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.button:hover {
+    background-color: rgb(211, 21, 21);
+}
+
+.button:active {
+    background-color: rgb(130, 0, 0);
+}
+
+.button:hover > .close {
+    animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+    100% {
+        opacity: 1;
+    }
 }
 
 #login-form {
-    
     display: flex;
     flex-direction: column;
 }
@@ -510,9 +678,9 @@ main section {
     position: relative;
     margin: 20px 0 40px;
     width: 190px;
-  }
-  
-  #login-form .form-control input {
+}
+
+#login-form .form-control input {
     background-color: transparent;
     border: 0;
     border-bottom: 2px #1e8449 solid;
@@ -521,8 +689,50 @@ main section {
     padding: 15px 0;
     font-size: 18px;
     color: #1e8449;
-  }
-  
+}
+
+#login-form .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+#login-form .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #1e8449(0, 0, 0);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#login-form .form-control input:focus+label span,
+#login-form .form-control input:valid+label span {
+    color: #1e8449;
+    transform: translateY(-30px);
+}
+
+#login-form button {
+    background-color: #1e8449;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: #145a32;
+}
+
+#logged-in-user {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #021a12;
+    text-transform: uppercase;
+}
+
 /* Input container */
 #cultivo-form .input-container {
     position: relative;
@@ -586,54 +796,6 @@ main section {
   }
   
   
-  #login-form .form-control label {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    pointer-events: none;
-  }
-  
-  #login-form .form-control label span {
-    display: inline-block;
-    font-size: 18px;
-    min-width: 5px;
-    color: #1e8449(0, 0, 0);
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
- #login-form .form-control input:focus+label span,
- #login-form  .form-control input:valid+label span {
-    color: #1e8449;
-    transform: translateY(-30px);
-  }
-
-#login-form button {
-    background-color: #1e8449;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#login-form button:hover {
-    background-color: #145a32;
-}
-
-#logged-in-user {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #021a12;
-    text-transform: uppercase;
-}
-
-.h2-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
 .h2-icon {
     width: 50px;
@@ -831,4 +993,332 @@ main section {
 @keyframes jump {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+}
+
+
+#automacao  section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#automacao h2, h3 {
+    color: #1e8449;
+}
+
+#automacao p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+#automacao ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#automacao li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#automacao li:hover {
+    background-color: #f9f9f9;
+}
+
+#automacao ul ul {
+    margin-left: 20px;
+}
+
+#automacao strong {
+    color: #1e8449;
+}
+
+#automacao p:first-letter {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+#automacao p:hover {
+    background-color: #f9f9f9;
+    border-left: 4px solid #1e8449;
+    padding-left: 16px;
+    transition: background-color 0.3s, border-left 0.3s, padding-left 0.3s;
+}
+
+#automacao button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.5s ease;
+}
+
+#automacao button:hover {
+    letter-spacing: 3px;
+    background-color: #1e8449;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(26, 114, 63) 0px 7px 29px 0px;
+}
+
+#automacao button:active {
+    letter-spacing: 3px;
+    background-color: #13522d;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #0c361e 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+#automacao .h2-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#automacao .h2-icon {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease filter 0.3s ease;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#automacao .h2-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+#automacao .hide {
+    display: none;
+}
+
+#pragas  section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#pragas h2, h3 {
+    color: #1e8449;
+}
+
+#pragas p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+#pragas ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#pragas li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#pragas li:hover {
+    background-color: #f9f9f9;
+}
+
+#pragas ul ul {
+    margin-left: 20px;
+}
+
+#pragas strong {
+    color: #1e8449;
+}
+
+#pragas p:first-letter {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+#pragas p:hover {
+    background-color: #f9f9f9;
+    border-left: 4px solid #1e8449;
+    padding-left: 16px;
+    transition: background-color 0.3s, border-left 0.3s, padding-left 0.3s;
+}
+
+#pragas button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.5s ease;
+}
+
+#pragas button:hover {
+    letter-spacing: 3px;
+    background-color: #1e8449;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(26, 114, 63) 0px 7px 29px 0px;
+}
+
+#pragas button:active {
+    letter-spacing: 3px;
+    background-color: #13522d;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #0c361e 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+#pragas .h2-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#pragas .h2-icon {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease filter 0.3s ease;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#pragas .h2-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+#pragas .hide {
+    display: none;
+}
+
+#fertilizantes  section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#fertilizantes h2, h3 {
+    color: #1e8449;
+}
+
+#fertilizantes p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+#fertilizantes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#fertilizantes li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#fertilizantes li:hover {
+    background-color: #f9f9f9;
+}
+
+#fertilizantes ul ul {
+    margin-left: 20px;
+}
+
+#fertilizantes strong {
+    color: #1e8449;
+}
+
+#fertilizantes p:first-letter {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+#fertilizantes p:hover {
+    background-color: #f9f9f9;
+    border-left: 4px solid #1e8449;
+    padding-left: 16px;
+    transition: background-color 0.3s, border-left 0.3s, padding-left 0.3s;
+}
+
+#fertilizantes button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.5s ease;
+}
+
+#fertilizantes button:hover {
+    letter-spacing: 3px;
+    background-color: #1e8449;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(26, 114, 63) 0px 7px 29px 0px;
+}
+
+#fertilizantes button:active {
+    letter-spacing: 3px;
+    background-color: #13522d;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #0c361e 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+#fertilizantes .h2-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#fertilizantes .h2-icon {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease filter 0.3s ease;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#fertilizantes .h2-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+#fertilizantes .hide {
+    display: none;
 }

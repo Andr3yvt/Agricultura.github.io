@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const loginBtn = document.getElementById('login-btn');
     const loginModal = document.getElementById('login-modal');
-    const closeBtn = document.querySelector('.close');
+    const closeBtn = document.querySelector('.button');
     const loginForm = document.getElementById('login-form');
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('loggedInUsername', usernameInput.value);
     });
 });
+
 
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
