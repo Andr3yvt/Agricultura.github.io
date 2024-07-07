@@ -1322,3 +1322,174 @@ main section {
 #fertilizantes .hide {
     display: none;
 }
+
+
+#settings-btn.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    gap: 8px;
+    height: 36px;
+    width: 120px;
+    border: none;
+    background: #1e84494b;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#settings-btn.lable {
+    line-height: 20px;
+    font-size: 17px;
+    color: #1e8449;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+#settings-btn.button:hover {
+    background: #195f3680;
+}
+
+#settings-btn.button:hover .svg-icon {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.button#settings-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Garante que o botão esteja acima de outros elementos */
+}
+
+#settings-modal.modal {
+    position: fixed;
+    top: 170px;
+    left: 90px;
+    transform: translate(-50%, -50%);
+    background-color: transparent; /* Mantém o fundo transparente */
+    padding: 20px; /* Aumenta o espaço interno do modal */
+    width: auto; /* Largura automática baseada no conteúdo */
+    display: none;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease; /* Animação de fade-in */
+    box-shadow: none;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#settings-modal.modal-content {
+    background-color: #0D1117; /* Cor de fundo do modal */
+    border-radius: 8px;
+    padding: 20px; /* Espaçamento interno do conteúdo */
+    text-align: center;
+    box-shadow: none; /* Remove a sombra */
+}
+
+#settings-modal.modal-content .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%; /* Largura total do modal */
+}
+
+#settings-modal.modal-content .input .value {
+    background: none;
+    border: none;
+    color: white; /* Cor do texto */
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#settings-modal.modal-content .input .value svg {
+    height: 24px;
+    width: 24px;
+}
+
+#settings-modal.modal-content .input .value:hover {
+    text-decoration: underline;
+}
+
+#settings-modal.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0D1117; /* Cor de fundo */
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px; /* Espaçamento interno */
+}
+
+#settings-modal.value {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#settings-modal.value:hover {
+    background-color: #21262C; /* Cor de fundo ao passar o mouse */
+}
+
+#settings-modal.value:focus {
+    background-color: #1A1F24; /* Cor de fundo ao focar */
+    outline: none;
+}
+
+#settings-modal.value svg {
+    width: 15px;
+}
+
+#settings-modal.input:hover > :not(.value:hover) {
+    transition: 300ms;
+    filter: blur(1px);
+    transform: scale(0.95, 0.95);
+}
+
+#settings-modal.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+#settings-modal.close-modal:hover {
+    text-decoration: underline;
+}
+
+#settings-modal.close-modal:focus {
+    outline: none;
+}
+
+#settings-modal.modal.fade-out {
+    animation: fadeOut 0.3s ease; /* Animação de fade-out */
+}
+
