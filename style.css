@@ -1498,15 +1498,16 @@ main section {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 360px;
-    top: 140px;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    max-width: 350px;
+    left: 50%; /* Ajusta o modal horizontalmente */
+    top: 50%;  /* Ajusta o modal verticalmente */
+    transform: translate(-50%, -50%); /* Centraliza o modal */
+    width: 60%; /* Ajusta a largura para 60% da tela */
+    max-width: 500px; /* Largura máxima do modal */
     background-color: #0d170db7;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
 }
 
 /* Estilo do botão de fechamento do modal */
@@ -1534,15 +1535,24 @@ main section {
     color: #fff;
 }
 
+/* Estilo da lista de checkboxes */
+#languageList {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 0;
+    margin: 0;
+}
+
 /* Estilo dos containers com checkbox */
-#container1,
-#container2,
-#container3 {
+.container1,
+.container2,
+.container3 {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 16px;
-    color: #1e8449;  /* Ajuste a cor do texto das opções aqui */
+    color: #1e8449;
     cursor: pointer;
 }
 
@@ -1550,7 +1560,7 @@ main section {
 #languageOption1,
 #languageOption2,
 #languageOption3 {
-    color: #ffffff; /* Ajuste a cor do texto das opções aqui */
+    color: #ffffff;
 }
 
 /* Esconde o input checkbox */
@@ -1565,8 +1575,8 @@ main section {
 #languageSvg2,
 #languageSvg3 {
     overflow: visible;
-    height: 20px; /* Ajuste o valor conforme necessário */
-    width: 20px;  /* Ajuste o valor conforme necessário */
+    height: 20px;
+    width: 20px;
 }
 
 /* Estilo para o path do SVG */
@@ -1593,4 +1603,43 @@ main section {
 
 .language-option:hover {
     text-decoration: underline;
+}
+
+/* Media queries para ajustar a responsividade */
+@media (max-width: 768px) {
+    #languageModal.modal {
+        width: 80%; /* Ajusta a largura para 80% da tela em dispositivos médios */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #languageModalTitle {
+        font-size: 18px;
+    }
+
+    .container1,
+    .container2,
+    .container3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #languageModal.modal {
+        width: 90%; /* Ajusta a largura para 90% da tela em dispositivos pequenos */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #languageModalTitle {
+        font-size: 16px;
+    }
+
+    .container1,
+    .container2,
+    .container3 {
+        font-size: 12px;
+    }
 }
