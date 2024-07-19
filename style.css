@@ -1411,7 +1411,7 @@ main section {
     width: 100%; /* Largura total do modal */
 }
 
-#settings-modal.modal-content .input .value {
+.modal-content .input .value {
     background: none;
     border: none;
     color: white; /* Cor do texto */
@@ -1422,12 +1422,12 @@ main section {
     gap: 8px;
 }
 
-#settings-modal.modal-content .input .value svg {
+.modal-content .input .value svg {
     height: 24px;
     width: 24px;
 }
 
-#settings-modal.modal-content .input .value:hover {
+.modal-content .input .value:hover {
     text-decoration: underline;
 }
 
@@ -1435,13 +1435,13 @@ main section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0D1117; /* Cor de fundo */
+    background-color: #0d170db7; /* Cor de fundo */
     justify-content: center;
     border-radius: 5px;
     padding: 10px; /* Espaçamento interno */
 }
 
-#settings-modal.value {
+.value {
     background-color: transparent;
     border: none;
     padding: 10px;
@@ -1453,20 +1453,20 @@ main section {
     border-radius: 4px;
 }
 
-#settings-modal.value:hover {
-    background-color: #21262C; /* Cor de fundo ao passar o mouse */
+.value:hover {
+    background-color: #212c22d0; /* Cor de fundo ao passar o mouse */
 }
 
-#settings-modal.value:focus {
-    background-color: #1A1F24; /* Cor de fundo ao focar */
+.value:focus {
+    background-color: #1a241ace; /* Cor de fundo ao focar */
     outline: none;
 }
 
-#settings-modal.value svg {
+.value svg {
     width: 15px;
 }
 
-#settings-modal.input:hover > :not(.value:hover) {
+.input:hover > :not(.value:hover) {
     transition: 300ms;
     filter: blur(1px);
     transform: scale(0.95, 0.95);
@@ -1493,3 +1493,104 @@ main section {
     animation: fadeOut 0.3s ease; /* Animação de fade-out */
 }
 
+/* Estilo do modal */
+#languageModal.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 360px;
+    top: 140px;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 350px;
+    background-color: #0d170db7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do botão de fechamento do modal */
+#closeLanguageModal {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#closeLanguageModal:hover,
+#closeLanguageModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Título do modal */
+#languageModalTitle {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Estilo dos containers com checkbox */
+#container1,
+#container2,
+#container3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #1e8449;  /* Ajuste a cor do texto das opções aqui */
+    cursor: pointer;
+}
+
+/* Adicionando cor ao texto das opções */
+#languageOption1,
+#languageOption2,
+#languageOption3 {
+    color: #ffffff; /* Ajuste a cor do texto das opções aqui */
+}
+
+/* Esconde o input checkbox */
+#languageCheckbox1,
+#languageCheckbox2,
+#languageCheckbox3 {
+    display: none;
+}
+
+/* Estilo para o SVG */
+#languageSvg1,
+#languageSvg2,
+#languageSvg3 {
+    overflow: visible;
+    height: 20px; /* Ajuste o valor conforme necessário */
+    width: 20px;  /* Ajuste o valor conforme necessário */
+}
+
+/* Estilo para o path do SVG */
+#languagePath1,
+#languagePath2,
+#languagePath3 {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+    stroke-dasharray: 241 9999999;
+    stroke-dashoffset: 0;
+}
+
+/* Estilo do path quando o checkbox está marcado */
+#languageCheckbox1:checked ~ #languageSvg1 .path,
+#languageCheckbox2:checked ~ #languageSvg2 .path,
+#languageCheckbox3:checked ~ #languageSvg3 .path {
+    stroke-dasharray: 70.5096664428711 9999999;
+    stroke-dashoffset: -262.2723388671875;
+}
+
+.language-option:hover {
+    text-decoration: underline;
+}

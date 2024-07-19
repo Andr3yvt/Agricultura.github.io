@@ -190,3 +190,43 @@ function closeSettingsModal() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var languageButton = document.getElementById("languageButton");
+    var languageModal = document.getElementById("languageModal");
+    var closeLanguageModal = document.getElementById("closeLanguageModal");
+    var languageCheckboxes = document.querySelectorAll('input[name="language"]');
+
+    // Abrir modal
+    languageButton.onclick = function() {
+        languageModal.style.display = "block";
+    }
+
+    // Fechar modal
+    closeLanguageModal.onclick = function() {
+        languageModal.style.display = "none";
+    }
+
+    // Fechar modal clicando fora
+    window.onclick = function(event) {
+        if (event.target == languageModal) {
+            languageModal.style.display = "none";
+        }
+    }
+
+    // Marcar "Português" como selecionado inicialmente
+    var savedLanguage = localStorage.getItem('selectedLanguage') || 'Português';
+    document.querySelector(`input[value="${savedLanguage}"]`).checked = true;
+
+    // Salvar seleção no localStorage
+    languageCheckboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                localStorage.setItem('selectedLanguage', this.value);
+                languageCheckboxes.forEach(function(box) {
+                    if (box !== checkbox) box.checked = false;
+                });
+            }
+        });
+    });
+});
