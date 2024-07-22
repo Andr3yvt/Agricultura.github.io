@@ -30,8 +30,8 @@
     <header class="main-header">
         <div class="login-box">
             <div id="logged-in-user" style="display: none;"></div>
-            <div class="btn btn-three" id="login-btn">
-                <span>Login</span>
+            <div class="btn btn-three" id="login-btn" data-translate="login">
+                <span>Entrar</span>
             </div>
             <!-- Outros botões e conteúdo aqui -->
         </div>
@@ -40,9 +40,9 @@
                 <button class="button">
                     <span class="X"></span>
                     <span class="Y"></span>
-                    <div class="close">Close</div>
+                    <div class="close" data-translate="close">Close</div>
                 </button>
-                <h2>Login</h2>
+                <h2 data-translate="login">Entrar</h2>
                 <form id="login-form">
                     <div class="form-control">
                         <input type="text" id="username" name="username" required="">
@@ -56,7 +56,7 @@
                             <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
                         </label>
                     </div>
-                    <button type="submit">Entrar</button>
+                    <button type="submit" data-translate="login">Entrar</button>
                 </form>
             </div>
         </div>
@@ -107,39 +107,40 @@
         </div>
 
         <div id="languageModal" class="modal">
-    <span id="closeLanguageModal">&times;</span>
-    <h2 id="languageModalTitle">Choose Language</h2>
-    <form id="languageList">
-        <label id="languageOption1" class="language-option container1">
-            <input type="checkbox" id="languageCheckbox1" name="language" value="English">
-            <svg id="languageSvg1" viewBox="0 0 64 64" height="20" width="20">
-                <path id="languagePath1" d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
-            </svg>
-            English
-        </label>
-        <label id="languageOption2" class="language-option container2">
-            <input type="checkbox" id="languageCheckbox2" name="language" value="Spanish">
-            <svg id="languageSvg2" viewBox="0 0 64 64" height="20" width="20">
-                <path id="languagePath2" d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
-            </svg>
-            Spanish
-        </label>
-        <label id="languageOption3" class="language-option container3">
-            <input type="checkbox" id="languageCheckbox3" name="language" value="Português">
-            <svg id="languageSvg3" viewBox="0 0 64 64" height="20" width="20">
-                <path id="languagePath3" d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
-            </svg>
-            Português
-        </label>
-    </form>
-</div>
+            <span id="closeLanguageModal">&times;</span>
+            <h2 id="languageModalTitle" data-translate="chooseLanguage">Choose Language</h2>
+            <form id="languageList">
+                <label id="languageOption1" class="language-option container1">
+                    <input type="radio" id="languageCheckbox1" name="language" value="en" onclick="setLanguage('en')">
+                    <svg id="languageSvg1" viewBox="0 0 64 64" height="20" width="20">
+                        <path id="languagePath1" d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                    </svg>
+                    English
+                </label>
+                <label id="languageOption2" class="language-option container2">
+                    <input type="radio" id="languageCheckbox2" name="language" value="es" onclick="setLanguage('es')">
+                    <svg id="languageSvg2" viewBox="0 0 64 64" height="20" width="20">
+                        <path id="languagePath2" d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                    </svg>
+                    Spanish
+                </label>
+                <label id="languageOption3" class="language-option container3">
+                    <input type="radio" id="languageCheckbox3" name="language" value="pt" onclick="setLanguage('pt')">
+                    <svg id="languageSvg3" viewBox="0 0 64 64" height="20" width="20">
+                        <path id="languagePath3" d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                    </svg>
+                    Português
+                </label>
+            </form>
+        </div>
+        
           
     
         <div id="main-content" class="hide">
-            <h1 class="main-title">Agricultura Inteligente</h1>
+            <h1 data-translate="welcome" class="main-title">Agricultura Inteligente</h1>
             <div class="site-description">
-                <p>Transformando a forma como cultivamos o futuro.</p>
-                <p>Conectando tecnologia e natureza para um mundo mais sustentável.</p>
+                <p data-translate="description1">Transformando a forma como cultivamos o futuro.</p>
+                <p data-translate="description2">Conectando tecnologia e natureza para um mundo mais sustentável.</p>
             </div>
         </div>
     </header>
@@ -147,295 +148,292 @@
 
         <div class="content-container">
             <section class="quem-somos">
-                <h2>Quem Somos</h2>
+                <h2 data-translate="Quem-somos">Quem Somos</h2>
                 <div class="quem-somos-content">
                     <div>
-                        <h3>Liderança Visionária</h3>
-                        <p>Nossa equipe de especialistas combina profunda experiência no agronegócio com uma visão inovadora.</p>
+                        <h3 data-translate="Quem-somos1">Liderança Visionária</h3>
+                        <p data-translate="Quem-somos2">Nossa equipe de especialistas combina profunda experiência no agronegócio com uma visão inovadora.</p>
                     </div>
                     <div>
-                        <h3>Compromisso com Resultados</h3>
-                        <p>Nosso objetivo é impulsionar o sucesso dos nossos clientes através de soluções práticas e eficientes.</p>
+                        <h3 data-translate="Quem-somos3">Compromisso com Resultados</h3>
+                        <p data-translate="Quem-somos4">Nosso objetivo é impulsionar o sucesso dos nossos clientes através de soluções práticas e eficientes.</p>
                     </div>
                     <div>
-                        <h3>Valores Sustentáveis</h3>
-                        <p>Prezamos pela sustentabilidade em todas as nossas iniciativas, promovendo práticas agroecológicas.</p>
+                        <h3  data-translate="Quem-somos5">Valores Sustentáveis</h3>
+                        <p  data-translate="Quem-somos6">Prezamos pela sustentabilidade em todas as nossas iniciativas, promovendo práticas agroecológicas.</p>
                     </div>
                 </div>
             </section>
         </div>
     
     <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <div class="servicos-container">
-            <div class="servico">
-                <h1>1.</h1>
-                <h3> Agricultura de Precisão</h3>
-                <p>Otimizamos o uso de insumos e recursos através de tecnologias avançadas de sensoriamento e análise de
-                    dados.</p>
-            </div>
-            <div class="servico">
-                <h1>2.</h1>
-                <h3> Gestão Integrada</h3>
-                <p>Oferecemos soluções de gerenciamento eficiente de lavouras, rebanhos e processos pós-colheita.</p>
-            </div>
-            <div class="servico">
-                <h1>3.</h1>
-                <h3> Consultoria Especializada</h3>
-                <p>Nossos especialistas fornecem orientação estratégica para maximizar a produtividade e
-                    sustentabilidade.</p>
-            </div>
-            <div class="servico">
-                <h1>4.</h1>
-                <h3> Treinamento e Capacitação</h3>
-                <p>Promovemos o desenvolvimento de competências técnicas e gerenciais para a equipe do cliente.</p>
-            </div>
+    <h2 data-translate="Serviços">Nossos Serviços</h2>
+    <div class="servicos-container">
+        <div class="servico">
+            <h1>1.</h1>
+            <h3 data-translate="Serviços1">Agricultura de Precisão</h3>
+            <p data-translate="Serviços2">Otimizamos o uso de insumos e recursos através de tecnologias avançadas de sensoriamento e análise de dados.</p>
         </div>
-    </section>
+        <div class="servico">
+            <h1>2.</h1>
+            <h3 data-translate="Serviços3">Gestão Integrada</h3>
+            <p data-translate="Serviços4">Oferecemos soluções de gerenciamento eficiente de lavouras, rebanhos e processos pós-colheita.</p>
+        </div>
+        <div class="servico">
+            <h1>3.</h1>
+            <h3 data-translate="Serviços5">Consultoria Especializada</h3>
+            <p data-translate="Serviços6">Nossos especialistas fornecem orientação estratégica para maximizar a produtividade e sustentabilidade.</p>
+        </div>
+        <div class="servico">
+            <h1>4.</h1>
+            <h3 data-translate="Serviços7">Treinamento e Capacitação</h3>
+            <p data-translate="Serviços8">Promovemos o desenvolvimento de competências técnicas e gerenciais para a equipe do cliente.</p>
+        </div>
+    </div>
+</section>
 
-    <nav>
-        <ul>
-            <li><button id="toggle-gestao" class="toggle-section" data-target="#gestao">Gestão da Fazenda</button></li>
-            <li><button id="toggle-pragas" class="toggle-section" data-target="#pragas">Identificação de Pragas e
-                    Doenças</button></li>
-            <li><button id="toggle-fertilizantes" class="toggle-section" data-target="#fertilizantes">Aplicação de
-                    Fertilizantes e Defensivos</button></li>
-            <li><button id="toggle-weather" class="toggle-section" data-target="#clima">Previsão do Tempo</button></li>
-            <li><button id="toggle-automacao" class="toggle-section" data-target="#automacao">Automação de
-                    Máquinas</button></li>
-            <li><button id="toggle-monitoramento" class="toggle-section"
-                    data-target="#monitoramento-cultivos">Monitoramento de Cultivos</button></li>
-        </ul>
-    </nav>
+
+<nav>
+    <ul>
+        <li><button id="toggle-gestao" class="toggle-section" data-target="#gestao" data-translate="farm-management">Gestão da Fazenda</button></li>
+        <li><button id="toggle-pragas" class="toggle-section" data-target="#pragas" data-translate="pest-disease">Identificação de Pragas e Doenças</button></li>
+        <li><button id="toggle-fertilizantes" class="toggle-section" data-target="#fertilizantes" data-translate="fertilizer-app">Aplicação de Fertilizantes e Defensivos</button></li>
+        <li><button id="toggle-weather" class="toggle-section" data-target="#clima" data-translate="weather-forecast">Previsão do Tempo</button></li>
+        <li><button id="toggle-automacao" class="toggle-section" data-target="#automacao" data-translate="machine-automation">Automação de Máquinas</button></li>
+        <li><button id="toggle-monitoramento" class="toggle-section" data-target="#monitoramento-cultivos" data-translate="crop-monitoring">Monitoramento de Cultivos</button></li>
+    </ul>
+</nav>
+
+
+
     <main>
-        <section id="gestao" class="hide">
-            <h2>Gestão da Fazenda</h2>
-            <!-- Conteúdo sobre gestão da fazenda -->
-  
         </section>
         <section id="monitoramento-cultivos" class="hide">
             <div class="Cultivo">
                 <div class="h2-container">
                     <img src="imgs/Trator.png" alt="Ícone de Cultivo" class="h2-icon">
-                    <h2>Monitoramento de Cultivo</h2>
+                    <h2 data-translate="monitoramentoCultivo">Monitoramento de Cultivo</h2>
                 </div>
             </div>
-            <p>Bem-vindo à seção "Monitoramento de Cultivo" do nosso site! Esta funcionalidade é uma ferramenta essencial para agricultores modernos que desejam acompanhar e gerenciar suas plantações de maneira eficiente.</p>
+            <p data-translate="bemVindo">Bem-vindo à seção "Monitoramento de Cultivo" do nosso site! Esta funcionalidade é uma ferramenta essencial para agricultores modernos que desejam acompanhar e gerenciar suas plantações de maneira eficiente.</p>
         
-            <h3>Visão Geral</h3>
-            <p>Ao acessar a seção "Monitoramento de Cultivo", você encontrará diversas informações e ferramentas projetadas para ajudar no gerenciamento das suas culturas agrícolas. A seção é composta por diversas partes, incluindo um formulário de cadastro de cultivos, uma lista de dados salvos e uma área para visualização gráfica.</p>
+            <h3 data-translate="visaoGeral">Visão Geral</h3>
+            <p data-translate="acessoSeção">Ao acessar a seção "Monitoramento de Cultivo", você encontrará diversas informações e ferramentas projetadas para ajudar no gerenciamento das suas culturas agrícolas. A seção é composta por diversas partes, incluindo um formulário de cadastro de cultivos, uma lista de dados salvos e uma área para visualização gráfica.</p>
         
-            <h3>Como Utilizar</h3>
+            <h3 data-translate="comoUtilizar">Como Utilizar</h3>
             <ul>
                 <li>
-                    <strong>Preenchimento do Formulário:</strong>
+                    <strong data-translate="preenchimentoFormulario">Preenchimento do Formulário:</strong>
                     <ul>
-                        <li>No formulário, você será solicitado a fornecer algumas informações essenciais sobre suas culturas.</li>
-                        <li><strong>Tipo de Cultura:</strong> Digite o nome do tipo de cultivo que você está monitorando, como "milho", "soja", "trigo", etc.</li>
-                        <li><strong>Data de Plantio:</strong> Selecione a data em que você plantou a cultura. Isso ajuda a rastrear o crescimento e desenvolvimento da planta ao longo do tempo.</li>
-                        <li><strong>Área Plantada (em hectares):</strong> Insira o tamanho da área onde a cultura foi plantada. Esse dado é importante para calcular a produtividade e a gestão dos recursos.</li>
+                        <li data-translate="informacoesCulturas">No formulário, você será solicitado a fornecer algumas informações essenciais sobre suas culturas.</li>
+                        <li><strong data-translate="tipoCultura">Tipo de Cultura:</strong> Digite o nome do tipo de cultivo que você está monitorando, como "milho", "soja", "trigo", etc.</li>
+                        <li><strong data-translate="dataPlantio">Data de Plantio:</strong> Selecione a data em que você plantou a cultura. Isso ajuda a rastrear o crescimento e desenvolvimento da planta ao longo do tempo.</li>
+                        <li><strong data-translate="areaPlantada">Área Plantada (em hectares):</strong> Insira o tamanho da área onde a cultura foi plantada. Esse dado é importante para calcular a produtividade e a gestão dos recursos.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Adicionando um Cultivo:</strong>
+                    <strong data-translate="adicionarCultivo">Adicionando um Cultivo:</strong>
                     <ul>
-                        <li>Após preencher todos os campos obrigatórios, clique no botão "Adicionar Cultivo".</li>
-                        <li>O sistema irá capturar os dados inseridos e exibir uma nova entrada na lista de "Dados Salvos". Cada entrada mostrará o tipo de cultura, a data de plantio e a área plantada.</li>
+                        <li data-translate="clicarAdicionarCultivo">Após preencher todos os campos obrigatórios, clique no botão "Adicionar Cultivo".</li>
+                        <li data-translate="exibirDadosSalvos">O sistema irá capturar os dados inseridos e exibir uma nova entrada na lista de "Dados Salvos". Cada entrada mostrará o tipo de cultura, a data de plantio e a área plantada.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Visualização dos Dados Salvos:</strong>
+                    <strong data-translate="visualizacaoDadosSalvos">Visualização dos Dados Salvos:</strong>
                     <ul>
-                        <li>Na seção "Dados Salvos", você verá uma lista com todas as culturas que foram cadastradas. Isso facilita o acompanhamento de diferentes cultivos ao longo do tempo.</li>
-                        <li>Cada item na lista será exibido no formato: <em>Tipo: [tipo de cultura], Data de Plantio: [data], Área: [área] hectares</em>.</li>
+                        <li data-translate="listaCultivos">Na seção "Dados Salvos", você verá uma lista com todas as culturas que foram cadastradas. Isso facilita o acompanhamento de diferentes cultivos ao longo do tempo.</li>
+                        <li data-translate="formatoLista">Cada item na lista será exibido no formato: <em>Tipo: [tipo de cultura], Data de Plantio: [data], Área: [área] hectares</em>.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Reset do Formulário:</strong>
+                    <strong data-translate="resetFormulario">Reset do Formulário:</strong>
                     <ul>
-                        <li>Depois de adicionar um cultivo, o formulário será automaticamente resetado para que você possa inserir novas informações sem precisar apagar os dados anteriores manualmente.</li>
+                        <li data-translate="formularioResetado">Depois de adicionar um cultivo, o formulário será automaticamente resetado para que você possa inserir novas informações sem precisar apagar os dados anteriores manualmente.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Visualização Gráfica:</strong>
+                    <strong data-translate="visualizacaoGrafica">Visualização Gráfica:</strong>
                     <ul>
-                        <li>Há uma seção reservada para gráficos que permitirão uma análise visual dos seus dados de cultivo. (Nota: a implementação do gráfico não está descrita aqui, mas normalmente incluiria informações como crescimento ao longo do tempo, comparação de produtividade entre diferentes cultivos, etc.)</li>
+                        <li data-translate="seçãoGraficos">Há uma seção reservada para gráficos que permitirão uma análise visual dos seus dados de cultivo. (Nota: a implementação do gráfico não está descrita aqui, mas normalmente incluiria informações como crescimento ao longo do tempo, comparação de produtividade entre diferentes cultivos, etc.)</li>
                     </ul>
                 </li>
             </ul>
         
-            <h3>Benefícios</h3>
+            <h3 data-translate="beneficios">Benefícios</h3>
             <ul>
-                <li><strong>Organização:</strong> Mantenha todas as informações sobre suas plantações organizadas em um só lugar.</li>
-                <li><strong>Gestão Eficiente:</strong> Com dados precisos e atualizados, você pode tomar decisões mais informadas sobre o manejo das suas culturas.</li>
-                <li><strong>Análise:</strong> Através da visualização gráfica, identifique padrões e tendências que podem ajudar a melhorar a produtividade.</li>
+                <li><strong data-translate="organizacao">Organização:</strong> Mantenha todas as informações sobre suas plantações organizadas em um só lugar.</li>
+                <li><strong data-translate="gestaoEficiente">Gestão Eficiente:</strong> Com dados precisos e atualizados, você pode tomar decisões mais informadas sobre o manejo das suas culturas.</li>
+                <li><strong data-translate="analise">Análise:</strong> Através da visualização gráfica, identifique padrões e tendências que podem ajudar a melhorar a produtividade.</li>
             </ul>
-            <p>Utilizar a ferramenta de monitoramento de cultivo é simples e intuitivo, proporcionando uma maneira eficaz de gerenciar suas plantações e maximizar a eficiência agrícola. Aproveite ao máximo essa funcionalidade para otimizar suas práticas de cultivo e alcançar melhores resultados!</p>
+            <p data-translate="utilizarFerramenta">Utilizar a ferramenta de monitoramento de cultivo é simples e intuitivo, proporcionando uma maneira eficaz de gerenciar suas plantações e maximizar a eficiência agrícola. Aproveite ao máximo essa funcionalidade para otimizar suas práticas de cultivo e alcançar melhores resultados!</p>
         
             <form id="cultivo-form">
                 <div class="input-container">
-                  <input id="tipo" name="tipo" type="text" class="input-field" placeholder=" " required>
-                  <label for="tipo" class="input-label">Tipo de Cultura</label>
-                  <span class="input-highlight"></span>
+                    <input id="tipo" name="tipo" type="text" class="input-field" placeholder=" " required>
+                    <label for="tipo" class="input-label" data-translate="tipoCultura">Tipo de Cultura</label>
+                    <span class="input-highlight"></span>
                 </div>
                 <div class="input-container">
-                  <input id="data-plantio" name="data-plantio" type="date" class="input-field" placeholder=" " required>
-                  <label for="data-plantio" class="input-label">Data de Plantio</label>
-                  <span class="input-highlight"></span>
+                    <input id="data-plantio" name="data-plantio" type="date" class="input-field" placeholder=" " required>
+                    <label for="data-plantio" class="input-label" data-translate="dataPlantio">Data de Plantio</label>
+                    <span class="input-highlight"></span>
                 </div>
                 <div class="input-container">
-                  <input id="area" name="area" type="number" min="0" step="0.01" class="input-field" placeholder=" " required>
-                  <label for="area" class="input-label">Área Plantada (em hectares)</label>
-                  <span class="input-highlight"></span>
+                    <input id="area" name="area" type="number" min="0" step="0.01" class="input-field" placeholder=" " required>
+                    <label for="area" class="input-label" data-translate="areaPlantada">Área Plantada (em hectares)</label>
+                    <span class="input-highlight"></span>
                 </div>
-                <button type="submit">Adicionar Cultivo</button>
+                <button type="submit" data-translate="adicionarCultivo">Adicionar Cultivo</button>
             </form>
             
             <div id="dados-salvos">
-                <h3>Dados Salvos:</h3>
+                <h3 data-translate="dadosSalvos">Dados Salvos:</h3>
                 <ul id="lista-cultivos"></ul>
             </div>
             <div id="grafico"></div>
         </section>
         
+        
             
       
         <section id="clima" class="hide">
             <div class="h2-container">
-                <img src="imgs/Tempo.png" alt="Ícone do Clima" class="h2-icon">
-                <h2>Previsão do Tempo e Clima</h2>
+                <img src="imgs/Tempo.png" alt="Ícone do Clima" class="h2-icon" data-translate="paisClima">
+                <h2 data-translate="previsaoTempoClima">Previsão do Tempo e Clima</h2>
             </div>
-            <p>A seção de Previsão do Tempo e Clima fornece informações detalhadas sobre as condições meteorológicas atuais e futuras, ajudando você a se planejar melhor para suas atividades diárias e agrícolas. Aqui, você pode verificar a previsão do tempo para a sua cidade ou qualquer outra localidade de interesse.</p>
+            <p data-translate="informacoesDetalhadas">A seção de Previsão do Tempo e Clima fornece informações detalhadas sobre as condições meteorológicas atuais e futuras, ajudando você a se planejar melhor para suas atividades diárias e agrícolas. Aqui, você pode verificar a previsão do tempo para a sua cidade ou qualquer outra localidade de interesse.</p>
         
-            <h3>Funcionalidades</h3>
+            <h3 data-translate="funcionalidades">Funcionalidades</h3>
             <ul>
-                <li><strong>Previsão Detalhada:</strong> Receba informações detalhadas sobre a previsão do tempo, incluindo temperatura, umidade, vento e precipitação.</li>
-                <li><strong>Alertas Meteorológicos:</strong> Fique informado sobre alertas meteorológicos importantes que possam afetar sua região, como tempestades, ondas de calor ou frio intenso.</li>
-                <li><strong>Gráficos Climáticos:</strong> Visualize gráficos que mostram as variações climáticas ao longo dos próximos dias, facilitando a análise de tendências e padrões.</li>
-                <li><strong>Busca por Cidade:</strong> Utilize a funcionalidade de busca para obter a previsão do tempo para qualquer cidade do mundo.</li>
+                <li><strong data-translate="previsaoDetalhada">Previsão Detalhada:</strong> <span data-translate="previsaoDetalhada2">Receba informações detalhadas sobre a previsão do tempo, incluindo temperatura, umidade, vento e precipitação.</span></li>
+                <li><strong data-translate="alertasMeteorologicos">Alertas Meteorológicos:</strong> <span data-translate="alertasMeteorologicos2">Fique informado sobre alertas meteorológicos importantes que possam afetar sua região, como tempestades, ondas de calor ou frio intenso.</span></li>
+                <li><strong data-translate="graficosClimaticos">Gráficos Climáticos:</strong> <span data-translate="graficosClimaticos2">Visualize gráficos que mostram as variações climáticas ao longo dos próximos dias, facilitando a análise de tendências e padrões.</span></li>
+                <li><strong data-translate="buscaCidade">Busca por Cidade:</strong> <span data-translate="buscaCidade2">Utilize a funcionalidade de busca para obter a previsão do tempo para qualquer cidade do mundo.</span></li>
             </ul>
         
-            <h3>Como Utilizar</h3>
+            <h3 data-translate="comoUtilizar">Como Utilizar</h3>
             <ul>
-                <li><strong>Verificação do Clima:</strong> Para verificar o clima de uma cidade específica, basta inserir o nome da cidade no campo de busca abaixo e clicar no botão de pesquisa.</li>
-                <li><strong>Interpretação dos Dados:</strong> A previsão do tempo será exibida com informações sobre a temperatura máxima e mínima, condições do céu (ensolarado, nublado, chuvoso, etc.), velocidade e direção do vento, e probabilidades de precipitação.</li>
-                <li><strong>Alertas:</strong> Caso haja algum alerta meteorológico para a região pesquisada, ele será exibido em destaque para sua maior segurança.</li>
+                <li><strong data-translate="verificacaoClima">Verificação do Clima:</strong> <span data-translate="verificacaoClima2">Para verificar o clima de uma cidade específica, basta inserir o nome da cidade no campo de busca abaixo e clicar no botão de pesquisa.</span></li>
+                <li><strong data-translate="interpretacaoDados">Interpretação dos Dados:</strong> <span data-translate="interpretacaoDados2">A previsão do tempo será exibida com informações sobre a temperatura máxima e mínima, condições do céu (ensolarado, nublado, chuvoso, etc.), velocidade e direção do vento, e probabilidades de precipitação.</span></li>
+                <li><strong data-translate="alertas">Alertas:</strong> <span data-translate="alertas2">Caso haja algum alerta meteorológico para a região pesquisada, ele será exibido em destaque para sua maior segurança.</span></li>
             </ul>
         
-            <p>Manter-se informado sobre o clima é crucial para tomar decisões mais acertadas no seu dia a dia e para a gestão eficiente de suas atividades agrícolas. Utilize esta ferramenta para planejar melhor suas ações e se preparar para as variações climáticas.</p>
+            <p data-translate="manterInformado">Manter-se informado sobre o clima é crucial para tomar decisões mais acertadas no seu dia a dia e para a gestão eficiente de suas atividades agrícolas. Utilize esta ferramenta para planejar melhor suas ações e se preparar para as variações climáticas.</p>
         
             <div class="container">
                 <div class="form">
-                    <h3>Confira o clima de uma cidade:</h3>
+                    <h3 data-translate="verificarClimaCidade">Confira o clima de uma cidade:</h3>
                     <div class="form-input-container">
-                        <input type="text" placeholder="Insira o nome da cidade" id="city-input" class="input-field">
-                        <button id="search" class="search-button">
+                        <input type="text" placeholder="Insira o nome da cidade" id="city-input" class="input-field" data-translate="insiraNomeCidade">
+                        <button id="search" class="search-button" data-translate="search">
+                            Buscar
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
                 </div>
-        <div id="weather-data" class="hide">
-            <h2>
-                <i class="fa-solid fa-location-dot"></i>
-                <span id="city"></span>
-                <img src="" alt="Pais do Clima" id="country">
-            </h2>
-            <p id="temperature"><span></span>&deg;C</p>
-            <div id="description-container">
-                <p id="description"></p>
-                <img src="" alt="Condições Climáticas" id="weather-icon">
+                <div id="weather-data" class="hide">
+                    <h2>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="city"></span>
+                        <img src="" alt="Pais do Clima" id="country" data-translate="paisClima">
+                    </h2>
+                    <p id="temperature"><span></span>&deg;C</p>
+                    <div id="description-container">
+                        <p id="description"></p>
+                        <img src="" alt="Condições Climáticas" id="weather-icon">
+                    </div>
+                    <div id="details-container">
+                        <p id="humidity">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span></span>
+                        </p>
+                        <p id="wind">
+                            <i class="fa-solid fa-wind"></i>
+                            <span></span>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div id="details-container">
-                <p id="humidity">
-                    <i class="fa-solid fa-droplet"></i>
-                    <span></span>
-                </p>
-                <p id="wind">
-                    <i class="fa-solid fa-wind"></i>
-                    <span></span>
-                </p>
+        </section>
+
+        <section id="automacao" class="hide">
+            <div class="h2-container">
+                <img src="imgs/Automacao.png" alt="Ícone de Automação" class="h2-icon" data-translate="iconeAutomacao">
+                <h2 data-translate="automacaoMaquinas">Automação de Máquinas</h2>
             </div>
-        </div>
-    </div>
-</section>
+            <p data-translate="informacoesAutomacao">Na seção de Automação de Máquinas, você encontrará informações e ferramentas para otimizar o uso de máquinas agrícolas através da automação. A automação pode aumentar a eficiência e reduzir custos operacionais.</p>
+            
+            <h3 data-translate="funcionalidades">Funcionalidades</h3>
+            <ul>
+                <li><strong data-translate="monitoramentoTempoReal">Monitoramento em Tempo Real:</strong> <span data-translate="monitoramentoTempoReal2">Acompanhe o desempenho das suas máquinas agrícolas em tempo real.</span></li>
+                <li><strong data-translate="controleRemoto">Controle Remoto:</strong> <span data-translate="controleRemoto2">Controle suas máquinas à distância, aumentando a segurança e a eficiência.</span></li>
+                <li><strong data-translate="agendamentoTarefas">Agendamento de Tarefas:</strong> <span data-translate="agendamentoTarefas2">Programe tarefas automatizadas para otimizar o uso das máquinas.</span></li>
+            </ul>
+        
+            <h3 data-translate="comoUtilizar">Como Utilizar</h3>
+            <p data-translate="passosUtilizacao">Para utilizar as funcionalidades de automação, siga os passos abaixo:</p>
+            <ol>
+                <li data-translate="acessarPainel">Acesse o painel de controle da máquina desejada.</li>
+                <li data-translate="configurarParametros">Configure os parâmetros de operação, como velocidade, área de trabalho, e tempo de operação.</li>
+                <li data-translate="ativarAutomacao">Ative a automação e monitore o desempenho através dos gráficos e relatórios disponíveis.</li>
+            </ol>
+        
+            <button id="automacao-btn" data-translate="mostrarMais">Mostrar mais</button>
+            <p id="automacao-extra" class="hide" data-translate="informacoesAdicionais">A automação de máquinas agrícolas é um avanço tecnológico que permite a realização de operações com precisão e eficiência. Aproveite essas ferramentas para maximizar a produtividade da sua fazenda.</p>
+        </section>
+        
 
-<section id="automacao" class="hide">
-    <div class="h2-container">
-        <img src="imgs/Automacao.png" alt="Ícone de Automação" class="h2-icon">
-        <h2>Automação de Máquinas</h2>
-    </div>
-    <p>Na seção de Automação de Máquinas, você encontrará informações e ferramentas para otimizar o uso de máquinas agrícolas através da automação. A automação pode aumentar a eficiência e reduzir custos operacionais.</p>
-    
-    <h3>Funcionalidades</h3>
-    <ul>
-        <li><strong>Monitoramento em Tempo Real:</strong> Acompanhe o desempenho das suas máquinas agrícolas em tempo real.</li>
-        <li><strong>Controle Remoto:</strong> Controle suas máquinas à distância, aumentando a segurança e a eficiência.</li>
-        <li><strong>Agendamento de Tarefas:</strong> Programe tarefas automatizadas para otimizar o uso das máquinas.</li>
-    </ul>
+        <section id="pragas" class="hide">
+            <div class="h2-container">
+                <img src="imgs/Pragas.png" alt="Ícone de Pragas" class="h2-icon" data-translate="iconePragas">
+                <h2 data-translate="identificacaoPragasDoencas">Identificação de Pragas e Doenças</h2>
+            </div>
+            <p data-translate="informacoesPragasDoencas">A seção de Identificação de Pragas e Doenças oferece recursos para identificar e gerenciar pragas e doenças que afetam suas culturas. Manter suas plantas saudáveis é essencial para garantir uma boa colheita.</p>
+            
+            <h3 data-translate="funcionalidades">Funcionalidades</h3>
+            <ul>
+                <li><strong data-translate="bancoDadosPragas">Banco de Dados de Pragas:</strong> <span data-translate="bancoDadosPragas2">Consulte um banco de dados com informações sobre diversas pragas e doenças.</span></li>
+                <li><strong data-translate="identificacaoVisual">Identificação Visual:</strong> <span data-translate="identificacaoVisual2">Use imagens e descrições para identificar pragas em suas plantas.</span></li>
+                <li><strong data-translate="recomendacoesTratamento">Recomendações de Tratamento:</strong> <span data-translate="recomendacoesTratamento2">Receba recomendações sobre os melhores tratamentos para cada tipo de praga ou doença.</span></li>
+            </ul>
+        
+            <h3 data-translate="comoUtilizar">Como Utilizar</h3>
+            <p data-translate="passosIdentificacao">Para utilizar as ferramentas de identificação, siga os passos abaixo:</p>
+            <ol>
+                <li data-translate="inspecionarPlantas">Inspecione suas plantas regularmente em busca de sinais de pragas ou doenças.</li>
+                <li data-translate="compararSinais">Compare os sinais encontrados com as imagens e descrições no banco de dados.</li>
+                <li data-translate="implementarTratamentos">Implemente os tratamentos recomendados para controlar e eliminar as pragas ou doenças.</li>
+            </ol>
+        
+            <button id="pragas-btn" data-translate="mostrarMais">Mostrar mais</button>
+            <p id="pragas-extra" class="hide" data-translate="informacoesAdicionais2">A identificação precoce de pragas e doenças é crucial para prevenir danos significativos às suas culturas. Utilize esses recursos para manter suas plantas saudáveis e produtivas.</p>
+        </section>
 
-    <h3>Como Utilizar</h3>
-    <p>Para utilizar as funcionalidades de automação, siga os passos abaixo:</p>
-    <ol>
-        <li>Acesse o painel de controle da máquina desejada.</li>
-        <li>Configure os parâmetros de operação, como velocidade, área de trabalho, e tempo de operação.</li>
-        <li>Ative a automação e monitore o desempenho através dos gráficos e relatórios disponíveis.</li>
-    </ol>
-
-    <button id="automacao-btn">Mostrar mais</button>
-    <p id="automacao-extra" class="hide">A automação de máquinas agrícolas é um avanço tecnológico que permite a realização de operações com precisão e eficiência. Aproveite essas ferramentas para maximizar a produtividade da sua fazenda.</p>
-</section>
-
-<section id="pragas" class="hide">
-    <div class="h2-container">
-        <img src="imgs/Pragas.png" alt="Ícone de Pragas" class="h2-icon">
-        <h2>Identificação de Pragas e Doenças</h2>
-    </div>
-    <p>A seção de Identificação de Pragas e Doenças oferece recursos para identificar e gerenciar pragas e doenças que afetam suas culturas. Manter suas plantas saudáveis é essencial para garantir uma boa colheita.</p>
-    
-    <h3>Funcionalidades</h3>
-    <ul>
-        <li><strong>Banco de Dados de Pragas:</strong> Consulte um banco de dados com informações sobre diversas pragas e doenças.</li>
-        <li><strong>Identificação Visual:</strong> Use imagens e descrições para identificar pragas em suas plantas.</li>
-        <li><strong>Recomendações de Tratamento:</strong> Receba recomendações sobre os melhores tratamentos para cada tipo de praga ou doença.</li>
-    </ul>
-
-    <h3>Como Utilizar</h3>
-    <p>Para utilizar as ferramentas de identificação, siga os passos abaixo:</p>
-    <ol>
-        <li>Inspecione suas plantas regularmente em busca de sinais de pragas ou doenças.</li>
-        <li>Compare os sinais encontrados com as imagens e descrições no banco de dados.</li>
-        <li>Implemente os tratamentos recomendados para controlar e eliminar as pragas ou doenças.</li>
-    </ol>
-
-    <button id="pragas-btn">Mostrar mais</button>
-    <p id="pragas-extra" class="hide">A identificação precoce de pragas e doenças é crucial para prevenir danos significativos às suas culturas. Utilize esses recursos para manter suas plantas saudáveis e produtivas.</p>
-</section>
-
-<section id="fertilizantes" class="hide">
-    <div class="h2-container">
-        <img src="imgs/Fertilizantes.png" alt="Ícone de Fertilizantes" class="h2-icon">
-        <h2>Aplicação de Fertilizantes e Defensivos</h2>
-    </div>
-    <p>Na seção de Aplicação de Fertilizantes e Defensivos, você encontrará orientações sobre como aplicar fertilizantes e defensivos de forma eficiente e segura, garantindo a saúde e o crescimento adequado de suas plantas.</p>
-    
-    <h3>Funcionalidades</h3>
-    <ul>
-        <li><strong>Calendário de Aplicação:</strong> Planeje a aplicação de fertilizantes e defensivos de acordo com o ciclo de crescimento das suas plantas.</li>
-        <li><strong>Dosagem Recomendada:</strong> Receba recomendações sobre as dosagens corretas para cada tipo de cultura.</li>
-        <li><strong>Segurança na Aplicação:</strong> Siga orientações de segurança para aplicar fertilizantes e defensivos de forma segura.</li>
-    </ul>
-
-    <h3>Como Utilizar</h3>
-    <p>Para utilizar as orientações de aplicação, siga os passos abaixo:</p>
-    <ol>
-        <li>Consulte o calendário de aplicação para saber o momento ideal de aplicação.</li>
-        <li>Siga as recomendações de dosagem para evitar a sub ou superdosagem.</li>
-        <li>Utilize os equipamentos de proteção individual (EPIs) recomendados durante a aplicação.</li>
-    </ol>
-
-    <button id="fertilizantes-btn">Mostrar mais</button>
-    <p id="fertilizantes-extra" class="hide">Aplicar fertilizantes e defensivos de forma adequada é essencial para promover o crescimento saudável das suas plantas e prevenir problemas. Utilize essas orientações para maximizar a eficiência dos seus insumos.</p>
-</section>
+        <section id="fertilizantes" class="hide">
+            <div class="h2-container">
+                <img src="imgs/Fertilizantes.png" alt="Ícone de Fertilizantes" class="h2-icon" data-translate="iconeFertilizantes">
+                <h2 data-translate="aplicacaoFertilizantesDefensivos">Aplicação de Fertilizantes e Defensivos</h2>
+            </div>
+            <p data-translate="informacoesFertilizantesDefensivos">Na seção de Aplicação de Fertilizantes e Defensivos, você encontrará orientações sobre como aplicar fertilizantes e defensivos de forma eficiente e segura, garantindo a saúde e o crescimento adequado de suas plantas.</p>
+            
+            <h3 data-translate="funcionalidades">Funcionalidades</h3>
+            <ul>
+                <li><strong data-translate="calendarioAplicacao">Calendário de Aplicação:</strong> <span data-translate="calendarioAplicacao2">Planeje a aplicação de fertilizantes e defensivos de acordo com o ciclo de crescimento das suas plantas.</span></li>
+                <li><strong data-translate="dosagemRecomendada">Dosagem Recomendada:</strong> <span data-translate="dosagemRecomendada2">Receba recomendações sobre as dosagens corretas para cada tipo de cultura.</span></li>
+                <li><strong data-translate="segurancaAplicacao">Segurança na Aplicação:</strong> <span data-translate="segurancaAplicacao2">Siga orientações de segurança para aplicar fertilizantes e defensivos de forma segura.</span></li>
+            </ul>
+        
+            <h3 data-translate="comoUtilizar">Como Utilizar</h3>
+            <p data-translate="passosAplicacao">Para utilizar as orientações de aplicação, siga os passos abaixo:</p>
+            <ol>
+                <li data-translate="consultarCalendario">Consulte o calendário de aplicação para saber o momento ideal de aplicação.</li>
+                <li data-translate="seguirRecomendacoes">Siga as recomendações de dosagem para evitar a sub ou superdosagem.</li>
+                <li data-translate="utilizarEPIs">Utilize os equipamentos de proteção individual (EPIs) recomendados durante a aplicação.</li>
+            </ol>
+        
+            <button id="fertilizantes-btn" data-translate="mostrarMais">Mostrar mais</button>
+            <p id="fertilizantes-extra" class="hide" data-translate="informacoesAdicionais3">Aplicar fertilizantes e defensivos de forma adequada é essencial para promover o crescimento saudável das suas plantas e prevenir problemas. Utilize essas orientações para maximizar a eficiência dos seus insumos.</p>
+        </section>  
 
        <section id="tecnologia">
     <h1>Tecnologias Avançadas</h1>

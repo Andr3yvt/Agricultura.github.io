@@ -230,3 +230,95 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    let translations;
+
+    fetch('translations.json')
+        .then(response => response.json())
+        .then(data => {
+            translations = data;
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
+            setLanguage(savedLanguage);
+        });
+
+    function setLanguage(lang) {
+        if (lang === 'pt') {
+            // If the selected language is Portuguese, reset the texts to their original content
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                element.textContent = element.getAttribute('data-original-text');
+            });
+        } else {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                element.textContent = translations[lang][key];
+            });
+        }
+        localStorage.setItem('selectedLanguage', lang);
+    }
+
+    window.setLanguage = setLanguage;
+
+    // Store original text content for elements
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        element.setAttribute('data-original-text', element.textContent);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    let translations;
+
+    fetch('translations.json')
+        .then(response => response.json())
+        .then(data => {
+            translations = data;
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
+            setLanguage(savedLanguage);
+        });
+
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            // Adiciona a classe de animação
+            element.classList.add('fade-in');
+
+            // Remove a classe de animação após a animação terminar
+            element.addEventListener('animationend', () => {
+                element.classList.remove('fade-in');
+            });
+
+            if (lang === 'pt') {
+                // Se o idioma selecionado for Português, redefine os textos para o conteúdo original
+                element.textContent = element.getAttribute('data-original-text');
+            } else {
+                const key = element.getAttribute('data-translate');
+                element.textContent = translations[lang][key];
+            }
+        });
+        localStorage.setItem('selectedLanguage', lang);
+    }
+
+    window.setLanguage = setLanguage;
+
+    // Armazena o conteúdo de texto original para os elementos
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        element.setAttribute('data-original-text', element.textContent);
+    });
+
+    // Marcar "Português" como selecionado inicialmente
+    var savedLanguage = localStorage.getItem('selectedLanguage') || 'Português';
+    document.querySelector(`input[value="${savedLanguage}"]`).checked = true;
+
+    // Salvar seleção no localStorage
+    const languageCheckboxes = document.querySelectorAll('input[name="language"]');
+    languageCheckboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                localStorage.setItem('selectedLanguage', this.value);
+                languageCheckboxes.forEach(function(box) {
+                    if (box !== checkbox) box.checked = false;
+                });
+                setLanguage(this.value);
+            }
+        });
+    });
+});
