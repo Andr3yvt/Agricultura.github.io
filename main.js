@@ -13,35 +13,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     });
 
- // Login Modal
+// Seleciona os elementos necessários
 const loginBtn = document.getElementById('login-btn');
 const loginModal = document.getElementById('login-modal');
-const closeBtn = document.querySelector('.button');
+const closeBtn = document.querySelector('.button .close');
 const loginForm = document.getElementById('login-form');
-const loggedInUsername = localStorage.getItem('loggedInUsername');
+const loggedInUserDiv = document.getElementById('logged-in-user');
+const usernameInput = document.getElementById('username');
+const loggedusername = localStorage.getItem('loggedInUsername');
 
+// Função para abrir o modal de login
 const openLoginModal = () => {
     loginModal.style.display = 'block';
 };
 
+// Função para fechar o modal de login
 const closeLoginModal = () => {
     loginModal.style.display = 'none';
 };
 
+// Função para abrir o modal de configurações
+const openSettingsModal = () => {
+    // Implementar a abertura do modal de configurações se necessário
+};
+
+// Event listener para abrir o modal de login ao clicar no botão de login
 loginBtn.addEventListener('click', () => {
     openLoginModal();
     closeSettingsModal(); // Fecha o modal de configurações se estiver aberto
 });
+
+// Event listener para fechar o modal de login ao clicar no botão de fechar
 closeBtn.addEventListener('click', closeLoginModal);
 
+// Event listener para tratar o login
 loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    loginBtn.style.display = 'none';
-    closeLoginModal();
-    document.getElementById('logged-in-user').textContent = usernameInput.value;
-    document.getElementById('logged-in-user').style.display = 'block';
-    localStorage.setItem('loggedInUsername', usernameInput.value);
+    event.preventDefault(); // Previne o comportamento padrão do formulário
+
+    const username = usernameInput.value.trim();
+    if (username) {
+        // Esconde o botão de login e mostra o nome do usuário
+        loginBtn.style.display = 'none';
+        closeLoginModal();
+        loggedInUserDiv.textContent = `Bem-vindo, ${username}!`;
+        loggedInUserDiv.style.display = 'block';
+        localStorage.setItem('loggedInUsername', username);
+    }
 });
+
+// Função para fechar o modal de configurações
+function closeSettingsModal() {
+    const modal = document.getElementById('settings-modal');
+    if (modal && modal.style.display !== 'none') {
+        modal.classList.add('fade-out');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            modal.classList.remove('fade-out');
+        }, 300); // Tempo da animação de fade-out (0.3s)
+    }
+}
+
+// Verifica se há um usuário logado no localStorage ao carregar a página
+if (loggedusername) {
+    loggedInUserDiv.textContent = `Bem-vindo, ${loggedusername}!`;
+    loggedInUserDiv.style.display = 'block';
+    loginBtn.style.display = 'none';
+}
 
 // Função para abrir e fechar o modal de configurações
 document.getElementById('settings-btn').addEventListener('click', function() {
@@ -58,17 +95,7 @@ document.getElementById('settings-btn').addEventListener('click', function() {
     }
 });
 
-// Função para fechar o modal de configurações
-function closeSettingsModal() {
-    var modal = document.getElementById('settings-modal');
-    if (modal.style.display !== 'none') {
-        modal.classList.add('fade-out');
-        setTimeout(() => {
-            modal.style.display = 'none';
-            modal.classList.remove('fade-out');
-        }, 300); // Tempo da animação de fade-out (0.3s)
-    }
-}
+
 
 
     // Seções Toggle
