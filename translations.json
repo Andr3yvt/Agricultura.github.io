@@ -127,7 +127,25 @@
             "consultarCalendario": "Consult the application calendar to know the ideal application time.",
             "seguirRecomendacoes": "Follow the dosage recommendations to avoid under or overdosing.",
             "utilizarEPIs": "Use the recommended personal protective equipment (PPE) during application.",
-            "informacoesAdicionais3": "Applying fertilizers and pesticides properly is essential to promote healthy plant growth and prevent problems. Use these guidelines to maximize the efficiency of your inputs."
+            "informacoesAdicionais3": "Applying fertilizers and pesticides properly is essential to promote healthy plant growth and prevent problems. Use these guidelines to maximize the efficiency of your inputs.",
+            "advanced-technologies": "Advanced Technologies",
+            "precision-agriculture": "Precision Agriculture",
+            "precision-agriculture-info": "Sensors, drones, and satellite images for accurate data collection.",
+            "process-automation": "Process Automation",
+            "process-automation-info": "Intelligent mechanization and robotics to optimize productivity.",
+            "data-analysis": "Data Analysis",
+            "data-analysis-info": "Artificial intelligence platforms for informed decision-making.",
+            "protected-agriculture": "Protected Agriculture",
+            "protected-agriculture-info": "Controlled environment cultivation solutions for greater efficiency.",
+            "sustainability-focus": "Sustainability Focus",
+            "agroecological-practices": "Agroecological Practices",
+            "agroecological-practices-info": "We promote efficient resource use, environmental preservation, and well-being of workers and the community.",
+            "circular-economy": "Circular Economy",
+            "recycling-reuse": "Recycling and reuse of waste",
+            "energy-water-use": "Rational use of energy and water",
+            "sustainable-packaging": "Development of sustainable packaging",
+            "certifications-green-labels": "Certifications and Green Labels",
+            "certifications-info": "We help our clients obtain certifications that prove their commitment to sustainability."
     },
 
 
@@ -268,7 +286,25 @@
                 "seguirRecomendacoes": "Siga las recomendaciones de dosificación para evitar la sub o sobredosificación.",
                 "utilizarEPIs": "Use el equipo de protección personal (EPP) recomendado durante la aplicación.",
                 "mostrarMais": "Mostrar más",
-                "informacoesAdicionais3": "Aplicar fertilizantes y pesticidas adecuadamente es esencial para promover el crecimiento saludable de sus plantas y prevenir problemas. Utilice estas directrices para maximizar la eficiencia de sus insumos."
+                "informacoesAdicionais3": "Aplicar fertilizantes y pesticidas adecuadamente es esencial para promover el crecimiento saludable de sus plantas y prevenir problemas. Utilice estas directrices para maximizar la eficiencia de sus insumos.",
+                "advanced-technologies": "Tecnologías Avanzadas",
+                "precision-agriculture": "Agricultura de Precisión",
+                "precision-agriculture-info": "Sensores, drones e imágenes satelitales para recolección de datos precisos.",
+                "process-automation": "Automatización de Procesos",
+                "process-automation-info": "Mecanización inteligente y robótica para optimizar la productividad.",
+                "data-analysis": "Análisis de Datos",
+                "data-analysis-info": "Plataformas de inteligencia artificial para la toma de decisiones informadas.",
+                "protected-agriculture": "Agricultura Protegida",
+                "protected-agriculture-info": "Soluciones de cultivo en ambiente controlado para mayor eficiencia.",
+                "sustainability-focus": "Enfoque en la Sostenibilidad",
+                "agroecological-practices": "Prácticas Agroecológicas",
+                "agroecological-practices-info": "Promovemos el uso eficiente de recursos, la preservación del medio ambiente y el bienestar de los trabajadores y la comunidad.",
+                "circular-economy": "Economía Circular",
+                "recycling-reuse": "Reciclaje y reutilización de residuos",
+                "energy-water-use": "Uso racional de energía y agua",
+                "sustainable-packaging": "Desarrollo de empaques sostenibles",
+                "certifications-green-labels": "Certificaciones y Etiquetas Verdes",
+                "certifications-info": "Ayudamos a nuestros clientes a obtener certificaciones que demuestran su compromiso con la sostenibilidad."
         
     }
 }
