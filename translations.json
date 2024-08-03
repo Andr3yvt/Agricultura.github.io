@@ -145,7 +145,15 @@
             "energy-water-use": "Rational use of energy and water",
             "sustainable-packaging": "Development of sustainable packaging",
             "certifications-green-labels": "Certifications and Green Labels",
-            "certifications-info": "We help our clients obtain certifications that prove their commitment to sustainability."
+            "certifications-info": "We help our clients obtain certifications that prove their commitment to sustainability.",
+            "imagemEventos": "Image of events and news",
+            "noticiasEventos": "News and Events",
+            "exposicaoTitulo": "Agro Tech Exhibition",
+            "exposicaoDescricao": "Come and discover our innovative solutions at the country's largest agricultural technology fair.",
+            "webinarTitulo": "Webinar: Agriculture 4.0",
+            "webinarDescricao": "Join our free webinar on the trends and opportunities in digital agriculture.",
+            "lancamentoTitulo": "Product Launch",
+            "lancamentoDescricao": "We will soon introduce our new farm management platform."
     },
 
 
@@ -304,7 +312,15 @@
                 "energy-water-use": "Uso racional de energía y agua",
                 "sustainable-packaging": "Desarrollo de empaques sostenibles",
                 "certifications-green-labels": "Certificaciones y Etiquetas Verdes",
-                "certifications-info": "Ayudamos a nuestros clientes a obtener certificaciones que demuestran su compromiso con la sostenibilidad."
+                "certifications-info": "Ayudamos a nuestros clientes a obtener certificaciones que demuestran su compromiso con la sostenibilidad.",
+                "imagemEventos": "Imagen de eventos y noticias",
+                "noticiasEventos": "Noticias y Eventos",
+                "exposicaoTitulo": "Exposición Agro Tech",
+                "exposicaoDescricao": "Ven a conocer nuestras soluciones innovadoras en la mayor feria de tecnología agrícola del país.",
+                "webinarTitulo": "Webinar: Agricultura 4.0",
+                "webinarDescricao": "Participa en nuestro webinar gratuito sobre las tendencias y oportunidades de la agricultura digital.",
+                "lancamentoTitulo": "Lanzamiento de Producto",
+                "lancamentoDescricao": "Pronto presentaremos nuestra nueva plataforma de gestión de fincas."
         
     }
 }

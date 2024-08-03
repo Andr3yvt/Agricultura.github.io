@@ -1,16 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Preloader
+    document.addEventListener('DOMContentLoaded', () => {
+    // Define a posição do scroll para o topo
+    window.scrollTo(0, 0);
+    document.body.classList.add('no-scroll'); // Desativa o scroll imediatamente
+
     window.addEventListener('load', function() {
-        document.body.classList.add('no-scroll');
         setTimeout(function() {
             document.getElementById('preloader').style.opacity = '0';
             document.getElementById('main-content').classList.remove('hide');
             document.getElementById('main-content').classList.add('show');
             setTimeout(function() {
                 document.getElementById('preloader').style.display = 'none';
-                document.body.classList.remove('no-scroll');
-            }, 1000);
-        }, 3000);
+                document.body.classList.remove('no-scroll'); // Reativa o scroll após a animação
+            }, 1000); // Tempo da transição de opacidade
+        }, 3000); // Tempo do preloader
     });
 
 // Seleciona os elementos necessários
