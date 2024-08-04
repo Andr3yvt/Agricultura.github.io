@@ -100,31 +100,48 @@ document.getElementById('settings-btn').addEventListener('click', function() {
 
 
 
-    // Seções Toggle
-    const buttons = document.querySelectorAll('.toggle-section');
-    const sections = document.querySelectorAll('main > section');
-    const servicosSection = document.getElementById('servicos');
-    const tecnologiaSection = document.getElementById('tecnologia');
-    const sustentabilidadeSection = document.getElementById('sustentabilidade');
+   // Seções Toggle
+const buttons = document.querySelectorAll('.toggle-section');
+const sections = document.querySelectorAll('main > section');
+const servicosSection = document.getElementById('servicos');
+const tecnologiaSection = document.getElementById('tecnologia');
+const sustentabilidadeSection = document.getElementById('sustentabilidade');
+const eventosSection = document.getElementById('eventos');
+const empreendedorismoRuralSection = document.getElementById('empreendedorismo-rural');
+const oportunidadesCampoCidadeSection = document.getElementById('oportunidades-campo-cidade');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const targetSectionId = button.getAttribute('data-target').substring(1);
-            sections.forEach(section => {
-                if (section.id !== targetSectionId && section.id !== 'servicos' && section.id !== 'tecnologia'
-                 && section.id !== 'sustentabilidade') {
-                    section.classList.add('hide');
-                }
-            });
-            const targetSection = document.getElementById(targetSectionId);
-            if (targetSection) {
-                targetSection.classList.remove('hide');
-                servicosSection.classList.remove('hide');
-                tecnologiaSection.classList.remove('hide');
-                sustentabilidadeSection.classList.remove('hide');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const targetSectionId = button.getAttribute('data-target').substring(1); // Remove o caractere '#'
+        
+        sections.forEach(section => {
+            // Verifica se a seção não é a alvo e não é uma das seções específicas
+            if (section.id !== targetSectionId && 
+                section.id !== 'servicos' && 
+                section.id !== 'tecnologia' &&
+                section.id !== 'sustentabilidade' &&
+                section.id !== 'eventos' &&
+                section.id !== 'empreendedorismo-rural' &&
+                section.id !== 'oportunidades-campo-cidade') {
+                section.classList.add('hide');
             }
         });
+
+        const targetSection = document.getElementById(targetSectionId);
+        if (targetSection) {
+            targetSection.classList.remove('hide');
+        }
+
+        // Sempre exibe as seções específicas
+        servicosSection.classList.remove('hide');
+        tecnologiaSection.classList.remove('hide');
+        sustentabilidadeSection.classList.remove('hide');
+        eventosSection.classList.remove('hide');
+        empreendedorismoRuralSection.classList.remove('hide');
+        oportunidadesCampoCidadeSection.classList.remove('hide');
     });
+});
+
 
     // Formulário de Cultivo
     const form = document.getElementById('cultivo-form');
@@ -175,48 +192,61 @@ document.getElementById('settings-btn').addEventListener('click', function() {
         }
     });
 
-    // Intersection Observer
-    const quemSomosElements = document.querySelectorAll('.quem-somos-content div');
-    const servicosElements = document.querySelectorAll('.servico');
-    const tecnologiaElements = document.querySelectorAll('.Tecnologia');
-    const sustentabilidadeElements = document.querySelectorAll('#sustentabilidade .item');
+// Intersection Observer
+const quemSomosElements = document.querySelectorAll('.quem-somos-content div');
+const servicosElements = document.querySelectorAll('.servico');
+const tecnologiaElements = document.querySelectorAll('.Tecnologia');
+const sustentabilidadeElements = document.querySelectorAll('#sustentabilidade .item');
+const eventosElement = document.querySelector('#eventos');
+const empreendedorismoRuralElement = document.querySelector('#empreendedorismo-rural');
+const oportunidadesCampoCidadeElement = document.querySelector('#oportunidades-campo-cidade');
 
-    const elements = [...quemSomosElements, ...servicosElements, ...tecnologiaElements, ...sustentabilidadeElements];
+const elements = [
+    ...quemSomosElements, 
+    ...servicosElements, 
+    ...tecnologiaElements, 
+    ...sustentabilidadeElements,
+    eventosElement,
+    empreendedorismoRuralElement,
+    oportunidadesCampoCidadeElement
+].filter(Boolean); // Remove valores nulos ou indefinidos
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
 
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    elements.forEach(element => {
-        observer.observe(element);
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
     });
+};
 
-    // Accordion
-    const accordions = document.querySelectorAll('.accordion');
+const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    accordions.forEach(accordion => {
-        accordion.addEventListener('click', () => {
-            const panel = accordion.nextElementSibling;
-            accordion.classList.toggle('active');
-            if (panel.style.display === 'block') {
-                panel.style.display = 'none';
-            } else {
-                panel.style.display = 'block';
-            }
-        });
+elements.forEach(element => {
+    if (element) { // Verifica se o elemento existe antes de observar
+        observer.observe(element);
+    }
+});
+
+// Accordion
+const accordions = document.querySelectorAll('.accordion');
+
+accordions.forEach(accordion => {
+    accordion.addEventListener('click', () => {
+        const panel = accordion.nextElementSibling;
+        accordion.classList.toggle('active');
+        if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+        } else {
+            panel.style.display = 'block';
+        }
+      });
     });
 });
 

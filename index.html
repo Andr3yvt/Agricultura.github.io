@@ -151,8 +151,12 @@
             </div>
         </div>
     </header>
-    
-
+    <section class="video">
+        <video controls>
+            <source src="video/video1.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </section>
         <div class="content-container">
             <section class="quem-somos">
                 <h2 data-translate="Quem-somos">Quem Somos</h2>
@@ -209,7 +213,12 @@
         <li><button id="toggle-monitoramento" class="toggle-section" data-target="#monitoramento-cultivos" data-translate="crop-monitoring">Monitoramento de Cultivos</button></li>
     </ul>
 </nav>
-
+<section class="video">
+    <video controls>
+        <source src="video/video2.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+</section>
 
 
     <main>
@@ -304,7 +313,7 @@
       
         <section id="clima" class="hide">
             <div class="h2-container">
-                <img src="imgs/Tempo.png" alt="Ícone do Clima" class="h2-icon" data-translate="paisClima">
+                <img src="imgs/tempo.jpg" alt="Ícone do Clima" class="h2-icon" data-translate="paisClima">
                 <h2 data-translate="previsaoTempoClima">Previsão do Tempo e Clima</h2>
             </div>
             <p data-translate="informacoesDetalhadas">A seção de Previsão do Tempo e Clima fornece informações detalhadas sobre as condições meteorológicas atuais e futuras, ajudando você a se planejar melhor para suas atividades diárias e agrícolas. Aqui, você pode verificar a previsão do tempo para a sua cidade ou qualquer outra localidade de interesse.</p>
@@ -364,7 +373,7 @@
 
         <section id="automacao" class="hide">
             <div class="h2-container">
-                <img src="imgs/Automacao.png" alt="Ícone de Automação" class="h2-icon" data-translate="iconeAutomacao">
+                <img src="imgs/automocao.jpg" alt="Ícone de Automação" class="h2-icon" data-translate="iconeAutomacao">
                 <h2 data-translate="automacaoMaquinas">Automação de Máquinas</h2>
             </div>
             <p data-translate="informacoesAutomacao">Na seção de Automação de Máquinas, você encontrará informações e ferramentas para otimizar o uso de máquinas agrícolas através da automação. A automação pode aumentar a eficiência e reduzir custos operacionais.</p>
@@ -391,7 +400,7 @@
 
         <section id="pragas" class="hide">
             <div class="h2-container">
-                <img src="imgs/Pragas.png" alt="Ícone de Pragas" class="h2-icon" data-translate="iconePragas">
+                <img src="imgs/pragas.jpg" alt="Ícone de Pragas" class="h2-icon" data-translate="iconePragas">
                 <h2 data-translate="identificacaoPragasDoencas">Identificação de Pragas e Doenças</h2>
             </div>
             <p data-translate="informacoesPragasDoencas">A seção de Identificação de Pragas e Doenças oferece recursos para identificar e gerenciar pragas e doenças que afetam suas culturas. Manter suas plantas saudáveis é essencial para garantir uma boa colheita.</p>
@@ -417,7 +426,7 @@
 
         <section id="fertilizantes" class="hide">
             <div class="h2-container">
-                <img src="imgs/Fertilizantes.png" alt="Ícone de Fertilizantes" class="h2-icon" data-translate="iconeFertilizantes">
+                <img src="imgs/fertilizante.jpg" alt="Ícone de Fertilizantes" class="h2-icon" data-translate="iconeFertilizantes">
                 <h2 data-translate="aplicacaoFertilizantesDefensivos">Aplicação de Fertilizantes e Defensivos</h2>
             </div>
             <p data-translate="informacoesFertilizantesDefensivos">Na seção de Aplicação de Fertilizantes e Defensivos, você encontrará orientações sobre como aplicar fertilizantes e defensivos de forma eficiente e segura, garantindo a saúde e o crescimento adequado de suas plantas.</p>
@@ -491,6 +500,7 @@
 
 
         <section id="eventos">
+            <div class="item">
             <div id="noticias-eventos">
                 <div id="imagem-noticias">
                     <img src="imgs/agronomia.jpg" alt="Imagem de eventos e notícias" data-translate="imagemEventos">
@@ -520,36 +530,116 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
 
+                <section id="empreendedorismo-rural">
+                    <div class="item">
+                    <h2 id="titulo-empreendedorismo-rural">Empreendedorismo Rural</h2>
+                    <p id="introducao">
+                        Na <strong>Agricultura Inteligente</strong>, acreditamos que o empreendedorismo rural é fundamental para conectar o campo à cidade e criar novas oportunidades de desenvolvimento. Esta seção é dedicada a compartilhar histórias inspiradoras de pessoas que transformaram suas vidas e suas comunidades através da inovação e do trabalho árduo no campo. Conheça três empreendedores que fizeram a diferença e veja como suas iniciativas impactaram positivamente tanto as áreas rurais quanto urbanas.
+                    </p>
+                    <div id="historia-maria" class="historia">
+                        <h3 id="titulo-maria">Maria Silva</h3>
+                        <button id="botao-maria" class="mostrar-mais" onclick="toggleHistoria('historia1')">Mostrar mais</button>
+                        <p id="historia1" class="detalhes-historia">
+                            Maria Silva começou sua jornada como empreendedora rural em uma pequena fazenda familiar no interior de Minas Gerais. Enfrentando desafios como a falta de infraestrutura e recursos limitados, Maria apostou na produção de alimentos orgânicos, cultivando produtos com técnicas sustentáveis. Com o tempo, sua linha de produtos foi crescendo e se tornou um sucesso, sendo comercializada em várias lojas e mercados da cidade. Maria não apenas gerou empregos para sua comunidade, mas também promoveu práticas agrícolas que preservam o meio ambiente, inspirando outros empreendedores a seguir o mesmo caminho.
+                        </p>
+                    </div>
+                    <div id="historia-joao" class="historia">
+                        <h3 id="titulo-joao">João Santos</h3>
+                        <button id="botao-joao" class="mostrar-mais" onclick="toggleHistoria('historia2')">Mostrar mais</button>
+                        <p id="historia2" class="detalhes-historia">
+                            João Santos viu uma grande oportunidade ao transformar sua propriedade rural em um destino turístico. Localizada em uma região pitoresca, sua fazenda passou a oferecer experiências autênticas do campo, como passeios a cavalo, colheitas de frutas e interação com animais. João criou um ambiente acolhedor para visitantes urbanos que buscavam uma conexão com a natureza e uma pausa da agitação da cidade. Seu empreendimento atraiu turistas de várias partes, contribuindo significativamente para a economia local e mostrando como o turismo rural pode ser uma fonte sustentável de renda e desenvolvimento.
+                        </p>
+                    </div>
+                    <div id="historia-ana" class="historia">
+                        <h3 id="titulo-ana">Ana Pereira</h3>
+                        <button id="botao-ana" class="mostrar-mais" onclick="toggleHistoria('historia3')">Mostrar mais</button>
+                        <p id="historia3" class="detalhes-historia">
+                            Ana Pereira usou tecnologia avançada para revolucionar a produção de leite em sua fazenda localizada no sul do Brasil. Investindo em sistemas de ordenha automatizados e técnicas de manejo moderno, Ana não só aumentou a eficiência e a qualidade de sua produção, como também estabeleceu parcerias estratégicas com empresas de laticínios na cidade. Seu trabalho garantiu a entrega de leite fresco e de alta qualidade para a área urbana, demonstrando como a inovação tecnológica no campo pode atender à demanda crescente das cidades e gerar valor para todos os envolvidos.
+                        </p>
+                    </div>
+                </div>
+                </section>
+                
+                <section id="oportunidades-campo-cidade">
+                    <div class="item">
+                    <h2 id="titulo-oportunidades-campo-cidade">Oportunidades do Campo à Cidade</h2>
+                    <p id="introducao-oportunidades">
+                        O campo não é mais apenas um local para cultivo e criação de animais; ele também está abrindo portas para novas oportunidades urbanas. Nesta seção, exploramos como as inovações e iniciativas rurais estão criando pontes para a cidade, oferecendo novas oportunidades de negócios e melhorando a qualidade de vida urbana.
+                    </p>
+                    <div id="oportunidade-agroindustrias" class="oportunidade">
+                        <h3 id="titulo-agroindustrias">Agroindústrias e Produtos Rurais na Cidade</h3>
+                        <button id="botao-agroindustrias" class="mostrar-mais" onclick="toggleOportunidade('oportunidade1')">Mostrar mais</button>
+                        <p id="oportunidade1" class="detalhes-oportunidade">
+                            As agroindústrias estão transformando produtos rurais em bens de consumo urbano, como alimentos gourmet e artesanais. Produtos como queijos, doces e conservas estão encontrando espaço nas prateleiras das cidades, permitindo que empreendedores rurais expandam seus mercados e ofereçam produtos de alta qualidade.
+                        </p>
+                    </div>
+                    <div id="oportunidade-turismo-rural" class="oportunidade">
+                        <h3 id="titulo-turismo-rural">Turismo Rural: Uma Experiência Urbana</h3>
+                        <button id="botao-turismo-rural" class="mostrar-mais" onclick="toggleOportunidade('oportunidade2')">Mostrar mais</button>
+                        <p id="oportunidade2" class="detalhes-oportunidade">
+                            O turismo rural está atraindo visitantes urbanos em busca de experiências autênticas no campo. Fazendas que oferecem hospedagem, passeios e atividades agrícolas permitem que os citadinos desfrutem de um contato direto com a vida no campo, criando uma conexão mais profunda com a origem dos alimentos e a natureza.
+                        </p>
+                    </div>
+                    <div id="oportunidade-educacao-rural" class="oportunidade">
+                        <h3 id="titulo-educacao-rural">Educação e Formação Rural para Urbanos</h3>
+                        <button id="botao-educacao-rural" class="mostrar-mais" onclick="toggleOportunidade('oportunidade3')">Mostrar mais</button>
+                        <p id="oportunidade3" class="detalhes-oportunidade">
+                            Cursos e workshops sobre práticas agrícolas, sustentabilidade e culinária rural estão se tornando populares entre os urbanitas. Essas oportunidades de aprendizado ajudam a disseminar o conhecimento sobre a agricultura e promovem uma maior valorização dos produtos e práticas rurais entre os moradores das cidades.
+                        </p>
+                    </div>
+                    </div>
+                </section>
+                
+                <section class="video">
+                    <video controls>
+                        <source src="video/video3.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </section>
         
-    </main>
-    <footer>
-        <p>&copy; 2024 Agricultura Inteligente</p>
-    </footer>
-    <script>
-        // Adicione um ouvinte de evento de clique ao botão de login
-        document.getElementById('login-btn').addEventListener('click', function () {
-            // Exibir o modal de login
-            document.getElementById('login-modal').style.display = 'block';
-        });
-
-        // Adicione um ouvinte de evento de clique ao botão de fechar no modal de login
-        document.getElementsByClassName('close')[0].addEventListener('click', function () {
-            // Fechar o modal de login
-            document.getElementById('login-modal').style.display = 'none';
-        });
-
-        // Adicione um ouvinte de evento de clique fora do modal para fechá-lo
-        window.addEventListener('click', function (event) {
-            const modal = document.getElementById('login-modal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
-    <script src="main.js"></script>
-</div>
-</body>
-
-</html>
+                <script>
+                    function toggleHistoria(id) {
+                        var historia = document.getElementById(id);
+                        if (historia.style.display === "none" || historia.style.display === "") {
+                            historia.style.display = "block";
+                        } else {
+                            historia.style.display = "none";
+                        }
+                    }
+        
+                    function toggleOportunidade(id) {
+                        var oportunidade = document.getElementById(id);
+                        if (oportunidade.style.display === "none" || oportunidade.style.display === "") {
+                            oportunidade.style.display = "block";
+                        } else {
+                            oportunidade.style.display = "none";
+                        }
+                    }
+                </script>
+            </main>
+            <footer>
+                <p>&copy; 2024 Agricultura Inteligente</p>
+            </footer>
+            <script>
+                document.getElementById('login-btn').addEventListener('click', function () {
+                    document.getElementById('login-modal').style.display = 'block';
+                });
+        
+                document.getElementsByClassName('close')[0].addEventListener('click', function () {
+                    document.getElementById('login-modal').style.display = 'none';
+                });
+        
+                window.addEventListener('click', function (event) {
+                    const modal = document.getElementById('login-modal');
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            </script>
+            <script src="main.js"></script>
+        </body>
+        </html>
+        
