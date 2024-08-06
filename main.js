@@ -1,4 +1,4 @@
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Define a posição do scroll para o topo
     window.scrollTo(0, 0);
     document.body.classList.add('no-scroll'); // Desativa o scroll imediatamente
@@ -380,4 +380,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+const eventosElements = document.querySelectorAll('#eventos .item'); // Atualizado para observar todos os elementos dentro de eventos
+const empreendedorismoRuralElements = document.querySelectorAll('#empreendedorismo-rural .item'); // Atualizado para observar todos os elementos dentro de empreendedorismo-rural
+const oportunidadesCampoCidadeElements = document.querySelectorAll('#oportunidades-campo-cidade .item'); // Atualizado para observar todos os elementos dentro de oportunidades-campo-cidade
+
+const elements = [ ...eventosElements, // Atualizado para adicionar todos os eventos
+...empreendedorismoRuralElements, // Atualizado para adicionar todos os empreendedores rurais
+...oportunidadesCampoCidadeElements // Atualizado para adicionar todas as oportunidades
+].filter(Boolean); // Remove valores nulos ou indefinidos
+
+const observerOptions = {
+root: null,
+rootMargin: '0px',
+threshold: 0.1
+};
+
+const observerCallback = (entries, observer) => {
+entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+    }
+});
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+elements.forEach(element => {
+if (element) { // Verifica se o elemento existe antes de observar
+    observer.observe(element);
+}
 });

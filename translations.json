@@ -153,7 +153,18 @@
             "webinarTitulo": "Webinar: Agriculture 4.0",
             "webinarDescricao": "Join our free webinar on the trends and opportunities in digital agriculture.",
             "lancamentoTitulo": "Product Launch",
-            "lancamentoDescricao": "We will soon introduce our new farm management platform."
+            "lancamentoDescricao": "We will soon introduce our new farm management platform.",
+            "tituloEmpreendedorismoRural": "Rural Entrepreneurship",
+            "introducaoEmpreendedorismoRural": "At <strong>Smart Agriculture</strong>, we believe that rural entrepreneurship is essential for connecting the countryside to the city and creating new development opportunities. This section is dedicated to sharing inspiring stories of people who have transformed their lives and communities through innovation and hard work in the countryside. Meet three entrepreneurs who made a difference and see how their initiatives positively impacted both rural and urban areas.",
+            "tituloMaria": "Maria Silva",
+            "botaoMaria": "Show more",
+            "historiaMaria": "Maria Silva began her journey as a rural entrepreneur on a small family farm in the interior of Minas Gerais. Facing challenges such as lack of infrastructure and limited resources, Maria bet on organic food production, cultivating products with sustainable techniques. Over time, her product line grew and became a success, being sold in various stores and markets in the city. Maria not only generated jobs for her community but also promoted agricultural practices that preserve the environment, inspiring other entrepreneurs to follow the same path.",
+            "tituloJoao": "João Santos",
+            "botaoJoao": "Show more",
+            "historiaJoao": "João Santos saw a great opportunity by transforming his rural property into a tourist destination. Located in a picturesque region, his farm began offering authentic countryside experiences, such as horseback riding, fruit picking, and interaction with animals. João created a welcoming environment for urban visitors seeking a connection with nature and a break from city hustle. His venture attracted tourists from various places, significantly contributing to the local economy and showing how rural tourism can be a sustainable source of income and development.",
+            "tituloAna": "Ana Pereira",
+            "botaoAna": "Show more",
+            "historiaAna": "Ana Pereira used advanced technology to revolutionize milk production on her farm located in southern Brazil. By investing in automated milking systems and modern management techniques, Ana not only increased the efficiency and quality of her production but also established strategic partnerships with dairy companies in the city. Her work ensured the delivery of fresh, high-quality milk to the urban area, demonstrating how technological innovation in the countryside can meet the growing demand of cities and generate value for all involved."
     },
 
 
@@ -320,7 +331,18 @@
                 "webinarTitulo": "Webinar: Agricultura 4.0",
                 "webinarDescricao": "Participa en nuestro webinar gratuito sobre las tendencias y oportunidades de la agricultura digital.",
                 "lancamentoTitulo": "Lanzamiento de Producto",
-                "lancamentoDescricao": "Pronto presentaremos nuestra nueva plataforma de gestión de fincas."
+                "lancamentoDescricao": "Pronto presentaremos nuestra nueva plataforma de gestión de fincas.",
+                "tituloEmpreendedorismoRural": "Emprendimiento Rural",
+                "introducaoEmpreendedorismoRural": "En <strong>Agricultura Inteligente</strong>, creemos que el emprendimiento rural es fundamental para conectar el campo con la ciudad y crear nuevas oportunidades de desarrollo. Esta sección está dedicada a compartir historias inspiradoras de personas que han transformado sus vidas y comunidades a través de la innovación y el trabajo arduo en el campo. Conozca a tres emprendedores que hicieron la diferencia y vea cómo sus iniciativas impactaron positivamente tanto en áreas rurales como urbanas.",
+                "tituloMaria": "Maria Silva",
+                "botaoMaria": "Mostrar más",
+                "historiaMaria": "Maria Silva comenzó su viaje como emprendedora rural en una pequeña granja familiar en el interior de Minas Gerais. Enfrentando desafíos como la falta de infraestructura y recursos limitados, Maria apostó por la producción de alimentos orgánicos, cultivando productos con técnicas sostenibles. Con el tiempo, su línea de productos creció y se convirtió en un éxito, vendiéndose en varias tiendas y mercados de la ciudad. Maria no solo generó empleos para su comunidad, sino que también promovió prácticas agrícolas que preservan el medio ambiente, inspirando a otros emprendedores a seguir el mismo camino.",
+                "tituloJoao": "João Santos",
+                "botaoJoao": "Mostrar más",
+                "historiaJoao": "João Santos vio una gran oportunidad al transformar su propiedad rural en un destino turístico. Ubicada en una región pintoresca, su granja comenzó a ofrecer experiencias auténticas del campo, como paseos a caballo, cosecha de frutas e interacción con animales. João creó un ambiente acogedor para los visitantes urbanos que buscaban una conexión con la naturaleza y un descanso del bullicio de la ciudad. Su emprendimiento atrajo turistas de varios lugares, contribuyendo significativamente a la economía local y mostrando cómo el turismo rural puede ser una fuente sostenible de ingresos y desarrollo.",
+                "tituloAna": "Ana Pereira",
+                "botaoAna": "Mostrar más",
+                "historiaAna": "Ana Pereira utilizó tecnología avanzada para revolucionar la producción de leche en su granja ubicada en el sur de Brasil. Al invertir en sistemas de ordeño automatizados y técnicas de manejo moderno, Ana no solo aumentó la eficiencia y calidad de su producción, sino que también estableció alianzas estratégicas con empresas de lácteos en la ciudad. Su trabajo aseguró la entrega de leche fresca y de alta calidad a la zona urbana, demostrando cómo la innovación tecnológica en el campo puede satisfacer la creciente demanda de las ciudades y generar valor para todos los involucrados."
         
     }
 }
