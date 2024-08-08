@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     videoFileName = 'video1.mp4'; // Português ou outro idioma padrão
             }
 
-            videoElement.src = 'video/${videoFileName}';
+            videoElement.src = `video/${videoFileName}`;
             // Forçar o vídeo a recarregar com o novo src
             videoElement.parentElement.load();
         }
@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     var savedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
-    document.querySelector(input[value="${savedLanguage}"]).checked = true;
+    document.querySelector(`input[value="${savedLanguage}"]`).checked = true;
 
     const languageCheckboxes = document.querySelectorAll('input[name="language"]');
     languageCheckboxes.forEach(function(checkbox) {
