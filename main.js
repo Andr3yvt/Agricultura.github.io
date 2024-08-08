@@ -307,40 +307,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setLanguage(lang) {
         if (lang === 'pt') {
-            // If the selected language is Portuguese, reset the texts to their original content
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                element.textContent = element.getAttribute('data-original-text');
-            });
-        } else {
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                element.textContent = translations[lang][key];
-            });
-        }
-        localStorage.setItem('selectedLanguage', lang);
-    }
-
-    window.setLanguage = setLanguage;
-
-    // Store original text content for elements
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        element.setAttribute('data-original-text', element.textContent);
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    let translations;
-
-    fetch('translations.json')
-        .then(response => response.json())
-        .then(data => {
-            translations = data;
-            const savedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
-            setLanguage(savedLanguage);
-        });
-
-    function setLanguage(lang) {
-        if (lang === 'pt') {
             document.querySelectorAll('[data-translate]').forEach(element => {
                 element.textContent = element.getAttribute('data-original-text');
             });
@@ -351,25 +317,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Atualizar vídeo
-        const videoElement = document.querySelector('.video video source');
-        if (videoElement) {
-            let videoFileName;
-            switch (lang) {
-                case 'en':
-                    videoFileName = 'video1_en.mp4';
-                    break;
-                case 'es':
-                    videoFileName = 'video1_es.mp4';
-                    break;
-                default:
-                    videoFileName = 'video1.mp4'; // Português ou outro idioma padrão
+        // Atualizar vídeos
+        const videoSources = {
+            video1: {
+                en: 'video1_en.mp4',
+                es: 'video1_es.mp4',
+                pt: 'video1.mp4'
+            },
+            video2: {
+                en: 'video2_en.mp4',
+                es: 'video2_es.mp4',
+                pt: 'video2.mp4'
             }
+        };
 
-            videoElement.src = `video/${videoFileName}`;
-            // Forçar o vídeo a recarregar com o novo src
-            videoElement.parentElement.load();
-        }
+        Object.keys(videoSources).forEach(videoId => {
+            const videoElement = document.querySelector(`#${videoId} source`);
+            if (videoElement) {
+                videoElement.src = `video/${videoSources[videoId][lang]}`;
+                // Forçar o vídeo a recarregar com o novo src
+                videoElement.parentElement.load();
+            }
+        });
 
         localStorage.setItem('selectedLanguage', lang);
     }
@@ -381,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     var savedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
-    document.querySelector(`input[value="${savedLanguage}"]`).checked = true;
+    document.querySelector(input[value="${savedLanguage}"]).checked = true;
 
     const languageCheckboxes = document.querySelectorAll('input[name="language"]');
     languageCheckboxes.forEach(function(checkbox) {
