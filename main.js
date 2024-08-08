@@ -340,24 +340,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     function setLanguage(lang) {
-        document.querySelectorAll('[data-translate]').forEach(element => {
-            element.classList.add('fade-in');
-            element.addEventListener('animationend', () => {
-                element.classList.remove('fade-in');
-            });
-
-            if (lang === 'pt') {
+        if (lang === 'pt') {
+            document.querySelectorAll('[data-translate]').forEach(element => {
                 element.textContent = element.getAttribute('data-original-text');
-            } else {
+            });
+        } else {
+            document.querySelectorAll('[data-translate]').forEach(element => {
                 const key = element.getAttribute('data-translate');
                 element.textContent = translations[lang][key];
-            }
-        });
+            });
+        }
 
         // Atualizar vídeo
         const videoElement = document.querySelector('.video video source');
         if (videoElement) {
-            videoElement.src = translations[lang]['video_url'];
+            let videoFileName;
+            switch (lang) {
+                case 'en':
+                    videoFileName = 'video1_en.mp4';
+                    break;
+                case 'es':
+                    videoFileName = 'video1_es.mp4';
+                    break;
+                default:
+                    videoFileName = 'video1.mp4'; // Português ou outro idioma padrão
+            }
+
+            videoElement.src = 'video/${videoFileName}';
             // Forçar o vídeo a recarregar com o novo src
             videoElement.parentElement.load();
         }
@@ -371,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
         element.setAttribute('data-original-text', element.textContent);
     });
 
-    var savedLanguage = localStorage.getItem('selectedLanguage') || 'Português';
+    var savedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
     document.querySelector(input[value="${savedLanguage}"]).checked = true;
 
     const languageCheckboxes = document.querySelectorAll('input[name="language"]');
@@ -421,3 +430,4 @@ if (element) { // Verifica se o elemento existe antes de observar
     observer.observe(element);
 }
 });
+
