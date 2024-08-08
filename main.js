@@ -100,7 +100,7 @@ document.getElementById('settings-btn').addEventListener('click', function() {
 
 
 
-   // Seções Toggle
+// Seções Toggle
 const buttons = document.querySelectorAll('.toggle-section');
 const sections = document.querySelectorAll('main > section');
 const servicosSection = document.getElementById('servicos');
@@ -109,6 +109,7 @@ const sustentabilidadeSection = document.getElementById('sustentabilidade');
 const eventosSection = document.getElementById('eventos');
 const empreendedorismoRuralSection = document.getElementById('empreendedorismo-rural');
 const oportunidadesCampoCidadeSection = document.getElementById('oportunidades-campo-cidade');
+const ContatoSection = document.getElementById('Contato');
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -116,13 +117,14 @@ buttons.forEach(button => {
         
         sections.forEach(section => {
             // Verifica se a seção não é a alvo e não é uma das seções específicas
-            if (section.id !== targetSectionId && 
-                section.id !== 'servicos' && 
+            if (section.id !== targetSectionId &&
+                section.id !== 'servicos' &&
                 section.id !== 'tecnologia' &&
                 section.id !== 'sustentabilidade' &&
                 section.id !== 'eventos' &&
                 section.id !== 'empreendedorismo-rural' &&
-                section.id !== 'oportunidades-campo-cidade') {
+                section.id !== 'oportunidades-campo-cidade' &&
+                section.id !== 'Contato') {
                 section.classList.add('hide');
             }
         });
@@ -139,9 +141,9 @@ buttons.forEach(button => {
         eventosSection.classList.remove('hide');
         empreendedorismoRuralSection.classList.remove('hide');
         oportunidadesCampoCidadeSection.classList.remove('hide');
+        ContatoSection.classList.remove('hide');
     });
 });
-
 
     // Formulário de Cultivo
     const form = document.getElementById('cultivo-form');
@@ -200,6 +202,7 @@ const sustentabilidadeElements = document.querySelectorAll('#sustentabilidade .i
 const eventosElement = document.querySelector('#eventos');
 const empreendedorismoRuralElement = document.querySelector('#empreendedorismo-rural');
 const oportunidadesCampoCidadeElement = document.querySelector('#oportunidades-campo-cidade');
+const ContatoElements = document.querySelectorAll('#Contato ');
 
 const elements = [
     ...quemSomosElements, 
@@ -208,7 +211,8 @@ const elements = [
     ...sustentabilidadeElements,
     eventosElement,
     empreendedorismoRuralElement,
-    oportunidadesCampoCidadeElement
+    oportunidadesCampoCidadeElement,
+    ContatoElements
 ].filter(Boolean); // Remove valores nulos ou indefinidos
 
 const observerOptions = {
@@ -337,37 +341,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setLanguage(lang) {
         document.querySelectorAll('[data-translate]').forEach(element => {
-            // Adiciona a classe de animação
             element.classList.add('fade-in');
-
-            // Remove a classe de animação após a animação terminar
             element.addEventListener('animationend', () => {
                 element.classList.remove('fade-in');
             });
 
             if (lang === 'pt') {
-                // Se o idioma selecionado for Português, redefine os textos para o conteúdo original
                 element.textContent = element.getAttribute('data-original-text');
             } else {
                 const key = element.getAttribute('data-translate');
                 element.textContent = translations[lang][key];
             }
         });
+
+        // Atualizar vídeo
+        const videoElement = document.querySelector('.video video source');
+        if (videoElement) {
+            videoElement.src = translations[lang]['video_url'];
+            // Forçar o vídeo a recarregar com o novo src
+            videoElement.parentElement.load();
+        }
+
         localStorage.setItem('selectedLanguage', lang);
     }
 
     window.setLanguage = setLanguage;
 
-    // Armazena o conteúdo de texto original para os elementos
     document.querySelectorAll('[data-translate]').forEach(element => {
         element.setAttribute('data-original-text', element.textContent);
     });
 
-    // Marcar "Português" como selecionado inicialmente
     var savedLanguage = localStorage.getItem('selectedLanguage') || 'Português';
-    document.querySelector(`input[value="${savedLanguage}"]`).checked = true;
+    document.querySelector(input[value="${savedLanguage}"]).checked = true;
 
-    // Salvar seleção no localStorage
     const languageCheckboxes = document.querySelectorAll('input[name="language"]');
     languageCheckboxes.forEach(function(checkbox) {
         checkbox.addEventListener('change', function() {
@@ -385,10 +391,12 @@ document.addEventListener('DOMContentLoaded', () => {
 const eventosElements = document.querySelectorAll('#eventos .item'); // Atualizado para observar todos os elementos dentro de eventos
 const empreendedorismoRuralElements = document.querySelectorAll('#empreendedorismo-rural .item'); // Atualizado para observar todos os elementos dentro de empreendedorismo-rural
 const oportunidadesCampoCidadeElements = document.querySelectorAll('#oportunidades-campo-cidade .item'); // Atualizado para observar todos os elementos dentro de oportunidades-campo-cidade
+const ContatoElements = document.querySelectorAll('#Contato .item');
 
 const elements = [ ...eventosElements, // Atualizado para adicionar todos os eventos
 ...empreendedorismoRuralElements, // Atualizado para adicionar todos os empreendedores rurais
-...oportunidadesCampoCidadeElements // Atualizado para adicionar todas as oportunidades
+...oportunidadesCampoCidadeElements,
+...ContatoElements // Atualizado para adicionar todas as oportunidades
 ].filter(Boolean); // Remove valores nulos ou indefinidos
 
 const observerOptions = {

@@ -1,4 +1,8 @@
 {
+    "pt": {
+        "video_url": "video/video1.mp4"
+    },
+
     "en": {
         "welcome": "Intelligent Agriculture",
         "login": "Login",
@@ -154,17 +158,33 @@
             "webinarDescricao": "Join our free webinar on the trends and opportunities in digital agriculture.",
             "lancamentoTitulo": "Product Launch",
             "lancamentoDescricao": "We will soon introduce our new farm management platform.",
-            "tituloEmpreendedorismoRural": "Rural Entrepreneurship",
-            "introducaoEmpreendedorismoRural": "At <strong>Smart Agriculture</strong>, we believe that rural entrepreneurship is essential for connecting the countryside to the city and creating new development opportunities. This section is dedicated to sharing inspiring stories of people who have transformed their lives and communities through innovation and hard work in the countryside. Meet three entrepreneurs who made a difference and see how their initiatives positively impacted both rural and urban areas.",
-            "tituloMaria": "Maria Silva",
-            "botaoMaria": "Show more",
-            "historiaMaria": "Maria Silva began her journey as a rural entrepreneur on a small family farm in the interior of Minas Gerais. Facing challenges such as lack of infrastructure and limited resources, Maria bet on organic food production, cultivating products with sustainable techniques. Over time, her product line grew and became a success, being sold in various stores and markets in the city. Maria not only generated jobs for her community but also promoted agricultural practices that preserve the environment, inspiring other entrepreneurs to follow the same path.",
-            "tituloJoao": "João Santos",
-            "botaoJoao": "Show more",
-            "historiaJoao": "João Santos saw a great opportunity by transforming his rural property into a tourist destination. Located in a picturesque region, his farm began offering authentic countryside experiences, such as horseback riding, fruit picking, and interaction with animals. João created a welcoming environment for urban visitors seeking a connection with nature and a break from city hustle. His venture attracted tourists from various places, significantly contributing to the local economy and showing how rural tourism can be a sustainable source of income and development.",
-            "tituloAna": "Ana Pereira",
-            "botaoAna": "Show more",
-            "historiaAna": "Ana Pereira used advanced technology to revolutionize milk production on her farm located in southern Brazil. By investing in automated milking systems and modern management techniques, Ana not only increased the efficiency and quality of her production but also established strategic partnerships with dairy companies in the city. Her work ensured the delivery of fresh, high-quality milk to the urban area, demonstrating how technological innovation in the countryside can meet the growing demand of cities and generate value for all involved."
+                "titulo_empreendedorismo_rural": "Rural Entrepreneurship",
+                "introducao": "At Agriculture Intelligent, we believe that rural entrepreneurship is crucial for connecting the countryside to the city and creating new development opportunities. This section is dedicated to sharing inspiring stories of people who have transformed their lives and communities through innovation and hard work in the countryside. Meet three entrepreneurs who made a difference and see how their initiatives positively impacted both rural and urban areas.",
+                "titulo_maria": "Maria Silva",
+                "mostrar_mais": "Show more",
+                "historia_maria": "Maria Silva started her journey as a rural entrepreneur on a small family farm in the interior of Minas Gerais. Facing challenges such as lack of infrastructure and limited resources, Maria invested in organic food production, cultivating products with sustainable techniques. Over time, her product line grew and became a success, being sold in several stores and markets in the city. Maria not only created jobs for her community but also promoted agricultural practices that preserve the environment, inspiring other entrepreneurs to follow the same path.",
+                "titulo_joao": "João Santos",
+                "historia_joao": "João Santos saw a great opportunity by transforming his rural property into a tourist destination. Located in a picturesque region, his farm began offering authentic countryside experiences, such as horseback riding, fruit picking, and interaction with animals. João created a welcoming environment for urban visitors seeking a connection with nature and a break from the city's hustle and bustle. His venture attracted tourists from various places, significantly contributing to the local economy and demonstrating how rural tourism can be a sustainable source of income and development.",
+                "titulo_ana": "Ana Pereira",
+                "historia_ana": "Ana Pereira used advanced technology to revolutionize milk production on her farm located in southern Brazil. Investing in automated milking systems and modern management techniques, Ana not only increased the efficiency and quality of her production but also established strategic partnerships with dairy companies in the city. Her work ensured the delivery of fresh, high-quality milk to the urban area, demonstrating how technological innovation in the countryside can meet the growing demand of cities and create value for all involved.",
+                "titulo_oportunidades_campo_cidade": "Opportunities from Countryside to City",
+                "introducao_oportunidades": "The countryside is no longer just a place for cultivation and animal husbandry; it is also opening doors to new urban opportunities. In this section, we explore how rural innovations and initiatives are creating bridges to the city, offering new business opportunities and improving urban quality of life.",
+                "titulo_agroindustrias": "Agroindustries and Rural Products in the City",
+                "oportunidade_agroindustrias": "Agroindustries are transforming rural products into urban consumer goods, such as gourmet and artisanal foods. Products like cheeses, sweets, and preserves are finding space on city shelves, allowing rural entrepreneurs to expand their markets and offer high-quality products.",
+                "titulo_turismo_rural": "Rural Tourism: An Urban Experience",
+                "oportunidade_turismo_rural": "Rural tourism is attracting urban visitors seeking authentic countryside experiences. Farms offering accommodation, tours, and agricultural activities allow city dwellers to enjoy direct contact with rural life, creating a deeper connection with the source of food and nature.",
+                "titulo_educacao_rural": "Rural Education and Training for Urbanites",
+                "oportunidade_educacao_rural": "Courses and workshops on agricultural practices, sustainability, and rural cooking are becoming popular among urbanites. These learning opportunities help spread knowledge about agriculture and promote greater appreciation of rural products and practices among city residents.",
+                "contato_titulo": "Contact",
+                "contato_endereco_titulo": "Address",
+                "contato_endereco": "Rua dos Agricultores, 123 - Cidade Agrícola, Brazil",
+                "contato_telefone_titulo": "Phone",
+                "contato_telefone": "(11) 1234-5678",
+                "contato_email_titulo": "Email",
+                "contato_email": "contact@agricultureintelligent.com.br",
+                "contato_redes_sociais_titulo": "Social Media",
+                "contato_redes_sociais": "Facebook | Instagram",
+                "video_url": "video/video1_en.mp4"
     },
 
 
@@ -332,17 +352,35 @@
                 "webinarDescricao": "Participa en nuestro webinar gratuito sobre las tendencias y oportunidades de la agricultura digital.",
                 "lancamentoTitulo": "Lanzamiento de Producto",
                 "lancamentoDescricao": "Pronto presentaremos nuestra nueva plataforma de gestión de fincas.",
-                "tituloEmpreendedorismoRural": "Emprendimiento Rural",
-                "introducaoEmpreendedorismoRural": "En <strong>Agricultura Inteligente</strong>, creemos que el emprendimiento rural es fundamental para conectar el campo con la ciudad y crear nuevas oportunidades de desarrollo. Esta sección está dedicada a compartir historias inspiradoras de personas que han transformado sus vidas y comunidades a través de la innovación y el trabajo arduo en el campo. Conozca a tres emprendedores que hicieron la diferencia y vea cómo sus iniciativas impactaron positivamente tanto en áreas rurales como urbanas.",
-                "tituloMaria": "Maria Silva",
-                "botaoMaria": "Mostrar más",
-                "historiaMaria": "Maria Silva comenzó su viaje como emprendedora rural en una pequeña granja familiar en el interior de Minas Gerais. Enfrentando desafíos como la falta de infraestructura y recursos limitados, Maria apostó por la producción de alimentos orgánicos, cultivando productos con técnicas sostenibles. Con el tiempo, su línea de productos creció y se convirtió en un éxito, vendiéndose en varias tiendas y mercados de la ciudad. Maria no solo generó empleos para su comunidad, sino que también promovió prácticas agrícolas que preservan el medio ambiente, inspirando a otros emprendedores a seguir el mismo camino.",
-                "tituloJoao": "João Santos",
-                "botaoJoao": "Mostrar más",
-                "historiaJoao": "João Santos vio una gran oportunidad al transformar su propiedad rural en un destino turístico. Ubicada en una región pintoresca, su granja comenzó a ofrecer experiencias auténticas del campo, como paseos a caballo, cosecha de frutas e interacción con animales. João creó un ambiente acogedor para los visitantes urbanos que buscaban una conexión con la naturaleza y un descanso del bullicio de la ciudad. Su emprendimiento atrajo turistas de varios lugares, contribuyendo significativamente a la economía local y mostrando cómo el turismo rural puede ser una fuente sostenible de ingresos y desarrollo.",
-                "tituloAna": "Ana Pereira",
-                "botaoAna": "Mostrar más",
-                "historiaAna": "Ana Pereira utilizó tecnología avanzada para revolucionar la producción de leche en su granja ubicada en el sur de Brasil. Al invertir en sistemas de ordeño automatizados y técnicas de manejo moderno, Ana no solo aumentó la eficiencia y calidad de su producción, sino que también estableció alianzas estratégicas con empresas de lácteos en la ciudad. Su trabajo aseguró la entrega de leche fresca y de alta calidad a la zona urbana, demostrando cómo la innovación tecnológica en el campo puede satisfacer la creciente demanda de las ciudades y generar valor para todos los involucrados."
-        
+                "titulo_empreendedorismo_rural": "Emprendimiento Rural",
+                "introducao": "En Agricultura Inteligente, creemos que el emprendimiento rural es fundamental para conectar el campo con la ciudad y crear nuevas oportunidades de desarrollo. Esta sección está dedicada a compartir historias inspiradoras de personas que han transformado sus vidas y sus comunidades a través de la innovación y el trabajo arduo en el campo. Conoce a tres emprendedores que hicieron la diferencia y ve cómo sus iniciativas han impactado positivamente tanto a las áreas rurales como urbanas.",
+                "titulo_maria": "Maria Silva",
+                "mostrar_mais": "Mostrar más",
+                "historia_maria": "Maria Silva comenzó su camino como emprendedora rural en una pequeña finca familiar en el interior de Minas Gerais. Enfrentando desafíos como la falta de infraestructura y recursos limitados, Maria apostó por la producción de alimentos orgánicos, cultivando productos con técnicas sostenibles. Con el tiempo, su línea de productos fue creciendo y se convirtió en un éxito, siendo comercializada en varias tiendas y mercados de la ciudad. Maria no solo generó empleos para su comunidad, sino que también promovió prácticas agrícolas que preservan el medio ambiente, inspirando a otros emprendedores a seguir el mismo camino.",
+                "titulo_joao": "João Santos",
+                "historia_joao": "João Santos vio una gran oportunidad al transformar su propiedad rural en un destino turístico. Ubicada en una región pintoresca, su finca comenzó a ofrecer experiencias auténticas del campo, como paseos a caballo, cosechas de frutas e interacción con animales. João creó un ambiente acogedor para los visitantes urbanos que buscaban una conexión con la naturaleza y un descanso del bullicio de la ciudad. Su emprendimiento atrajo turistas de varias partes, contribuyendo significativamente a la economía local y demostrando cómo el turismo rural puede ser una fuente sostenible de ingresos y desarrollo.",
+                "titulo_ana": "Ana Pereira",
+                "historia_ana": "Ana Pereira utilizó tecnología avanzada para revolucionar la producción de leche en su finca ubicada en el sur de Brasil. Invirtiendo en sistemas de ordeñe automatizados y técnicas de manejo moderno, Ana no solo aumentó la eficiencia y la calidad de su producción, sino que también estableció asociaciones estratégicas con empresas de productos lácteos en la ciudad. Su trabajo garantizó la entrega de leche fresca y de alta calidad a la zona urbana, demostrando cómo la innovación tecnológica en el campo puede satisfacer la creciente demanda de las ciudades y generar valor para todos los involucrados.",
+                "titulo_oportunidades_campo_cidade": "Oportunidades del Campo a la Ciudad",
+                "introducao_oportunidades": "El campo ya no es solo un lugar para cultivo y cría de animales; también está abriendo puertas a nuevas oportunidades urbanas. En esta sección, exploramos cómo las innovaciones e iniciativas rurales están creando puentes hacia la ciudad, ofreciendo nuevas oportunidades de negocio y mejorando la calidad de vida urbana.",
+                "titulo_agroindustrias": "Agroindustrias y Productos Rurales en la Ciudad",
+                "oportunidade_agroindustrias": "Las agroindustrias están transformando productos rurales en bienes de consumo urbano, como alimentos gourmet y artesanales. Productos como quesos, dulces y conservas están encontrando espacio en las estanterías de las ciudades, permitiendo que los emprendedores rurales amplíen sus mercados y ofrezcan productos de alta calidad.",
+                "titulo_turismo_rural": "Turismo Rural: Una Experiencia Urbana",
+                "oportunidade_turismo_rural": "El turismo rural está atrayendo a visitantes urbanos en busca de experiencias auténticas en el campo. Las granjas que ofrecen alojamiento, paseos y actividades agrícolas permiten que los citadinos disfruten de un contacto directo con la vida en el campo, creando una conexión más profunda con el origen de los alimentos y la naturaleza.",
+                "titulo_educacao_rural": "Educación y Formación Rural para Urbanos",
+                "oportunidade_educacao_rural": "Los cursos y talleres sobre prácticas agrícolas, sostenibilidad y cocina rural se están volviendo populares entre los urbanitas. Estas oportunidades de aprendizaje ayudan a difundir el conocimiento sobre la agricultura y promueven una mayor valorización de los productos y prácticas rurales entre los residentes urbanos.",
+                "contato_titulo": "Contacto",
+                "contato_endereco_titulo": "Dirección",
+                "contato_endereco": "Rua dos Agricultores, 123 - Ciudad Agrícola, Brasil",
+                "contato_telefone_titulo": "Teléfono",
+                "contato_telefone": "(11) 1234-5678",
+                "contato_email_titulo": "Correo Electrónico",
+                "contato_email": "contacto@agriculturainteigente.com.br",
+                "contato_redes_sociais_titulo": "Redes Sociales",
+                "contato_redes_sociais": "Facebook | Instagram",
+                "video_url": "video/video1_es.mp4"
     }
 }
+
+
+

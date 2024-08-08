@@ -193,7 +193,7 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1e8449;
+    background-color: #4A693F;
     color: #fff;
 }
 
@@ -295,7 +295,7 @@ footer {
   
 
 .container {
-    background: linear-gradient(180deg, rgba(89, 76, 238, 1) 0%, #8dd0f5 100%);
+    background: linear-gradient(180deg, #294121 0%, #809e73 100%);
     max-width: 600px;
     margin: 0 auto;
     box-shadow: 5px 5px 5px grey;
@@ -2422,4 +2422,51 @@ video {
 .visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+#Contato {
+    background-color: #38512F; /* Verde escuro */
+    color: white;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+
+.Contato-header {
+    font-size: 2em; /* Fonte do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    text-align: left; /* Título alinhado à esquerda */
+}
+
+
+.Contato-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para a tela grande */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens no container */
+}
+
+.Contato2 {
+    background-color: #4A693F; /* Verde mais claro para as divs */
+    border: 2px solid #38512F; /* Borda verde escura */
+    border-radius: 8px; /* Borda levemente arredondada */
+    padding: 10px;
+    text-align: center;
+}
+
+.Contato2 h2 {
+    color: white; /* Cor branca para o título dentro das divs */
+}
+
+@media (max-width: 768px) {
+    .Contato-grid {
+        grid-template-columns: 1fr; /* Divs ficam em uma coluna em dispositivos móveis */
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#Contato {
+    font-family: 'Roboto'; /* Fonte mais formal */
 }
