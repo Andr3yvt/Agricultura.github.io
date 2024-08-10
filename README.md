@@ -5,6 +5,7 @@
 Este é um site de Agricultura Inteligente que inclui várias funcionalidades para facilitar a navegação e a interação do usuário.
 
 ## SITE: https://andr3yvt.github.io/Agricultura.github.io/
+PS: o site funciona melhor por esse link do que você extrair ele no seu computador.
 
 ## Funcionalidades
 
