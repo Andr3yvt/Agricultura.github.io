@@ -4,6 +4,8 @@
 
 Este é um site de Agricultura Inteligente que inclui várias funcionalidades para facilitar a navegação e a interação do usuário.
 
+## SITE: https://andr3yvt.github.io/Agricultura.github.io/
+
 ## Funcionalidades
 
 1. **Preloader**: Uma animação de carregamento que aparece quando o site é aberto. Ele fica visível por 4 segundos e depois desaparece.
